@@ -1,0 +1,5 @@
+jordan_winger mapping: Mapping fermions to qubits, JordanWignerMapper()
+- Electronic structure
+- To encode the problem into the state of a quantum computer, these operators must be mapped to spin operators
+- parity
+- bravyi_kitaev
