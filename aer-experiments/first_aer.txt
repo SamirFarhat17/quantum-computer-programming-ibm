@@ -1,0 +1,30 @@
+Cloud backends that are available:
+ibmq_qasm_simulator
+ibmq_armonk
+ibmq_santiago
+ibmq_bogota
+ibmq_lima
+ibmq_belem
+ibmq_quito
+simulator_statevector
+simulator_mps
+simulator_extended_stabilizer
+simulator_stabilizer
+ibmq_manila
+-------------------------------------------------------------------------------------------------------------
+Local backends that are available:
+aer_simulator
+aer_simulator_statevector
+aer_simulator_density_matrix
+aer_simulator_stabilizer
+aer_simulator_matrix_product_state
+aer_simulator_extended_stabilizer
+aer_simulator_unitary
+aer_simulator_superop
+qasm_simulator
+statevector_simulator
+unitary_simulator
+pulse_simulator
+--------------------------------------------------------------------------------------------------------------
+Counts(ideal): {'000': 518, '111': 506}
+Counts(noise): {'001': 21, '101': 63, '010': 24, '110': 23, '100': 19, '111': 372, '000': 477, '011': 25}

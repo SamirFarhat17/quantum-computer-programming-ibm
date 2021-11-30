@@ -1,5 +1,860 @@
+Cloud backends that are available:
+ibmq_qasm_simulator
+ibmq_armonk
+ibmq_santiago
+ibmq_bogota
+ibmq_lima
+ibmq_belem
+ibmq_quito
+simulator_statevector
+simulator_mps
+simulator_extended_stabilizer
+simulator_stabilizer
+ibmq_manila
+-------------------------------------------------------------------------------------------------------------
+Local backends that are available:
+aer_simulator
+aer_simulator_statevector
+aer_simulator_density_matrix
+aer_simulator_stabilizer
+aer_simulator_matrix_product_state
+aer_simulator_extended_stabilizer
+aer_simulator_unitary
+aer_simulator_superop
+qasm_simulator
+statevector_simulator
+unitary_simulator
+pulse_simulator
+-------------------------------------------------------------------------------------------------------------
 jordan_winger mapping: Mapping fermions to qubits, JordanWignerMapper()
 - Electronic structure
 - To encode the problem into the state of a quantum computer, these operators must be mapped to spin operators
 - parity
 - bravyi_kitaev
+
+-------------------------------------------------------------------------------------------------------------
+Built-in gates:
+- gate
+- gate CX: Controlled gates
+- gate rz: global-phase gate
+Hirearchically defined unitary gates:
+- sequence of built-in gates
+Quantum gate modifiers
+- ctrl
+- inv
+-------------------------------------------------------------------------------------------------------------
+Gate Totality
+Circuit Library¶
+Circuit Library (qiskit.circuit.library)¶
+Standard Gates¶
+Barrier(num_qubits)
+
+Barrier instruction.
+
+C3XGate([angle, label, ctrl_state])
+
+The X gate controlled on 3 qubits.
+
+C3SXGate([label, ctrl_state, angle])
+
+The 3-qubit controlled sqrt-X gate.
+
+C4XGate([label, ctrl_state])
+
+The 4-qubit controlled X gate.
+
+CCXGate([label, ctrl_state])
+
+CCX gate, also known as Toffoli gate.
+
+DCXGate()
+
+Double-CNOT gate.
+
+CHGate([label, ctrl_state])
+
+Controlled-Hadamard gate.
+
+CPhaseGate(theta[, label, ctrl_state])
+
+Controlled-Phase gate.
+
+CRXGate(theta[, label, ctrl_state])
+
+Controlled-RX gate.
+
+CRYGate(theta[, label, ctrl_state])
+
+Controlled-RY gate.
+
+CRZGate(theta[, label, ctrl_state])
+
+Controlled-RZ gate.
+
+CSwapGate([label, ctrl_state])
+
+Controlled-SWAP gate, also known as the Fredkin gate.
+
+CSXGate([label, ctrl_state])
+
+Controlled-√X gate.
+
+CUGate(theta, phi, lam, gamma[, label, …])
+
+Controlled-U gate (4-parameter two-qubit gate).
+
+CU1Gate(theta[, label, ctrl_state])
+
+Controlled-U1 gate.
+
+CU3Gate(theta, phi, lam[, label, ctrl_state])
+
+Controlled-U3 gate (3-parameter two-qubit gate).
+
+CXGate([label, ctrl_state])
+
+Controlled-X gate.
+
+CYGate([label, ctrl_state])
+
+Controlled-Y gate.
+
+CZGate([label, ctrl_state])
+
+Controlled-Z gate.
+
+HGate([label])
+
+Single-qubit Hadamard gate.
+
+IGate([label])
+
+Identity gate.
+
+MCPhaseGate(lam, num_ctrl_qubits[, label])
+
+Multi-controlled-Phase gate.
+
+MCXGate([num_ctrl_qubits, label, ctrl_state])
+
+The general, multi-controlled X gate.
+
+MCXGrayCode([num_ctrl_qubits, label, ctrl_state])
+
+Implement the multi-controlled X gate using the Gray code.
+
+MCXRecursive([num_ctrl_qubits, label, …])
+
+Implement the multi-controlled X gate using recursion.
+
+MCXVChain([num_ctrl_qubits, dirty_ancillas, …])
+
+Implement the multi-controlled X gate using a V-chain of CX gates.
+
+Measure()
+
+Quantum measurement in the computational basis.
+
+MSGate(num_qubits, theta[, label])
+
+MSGate has been deprecated.
+
+PhaseGate(theta[, label])
+
+Single-qubit rotation about the Z axis.
+
+RCCXGate([label])
+
+The simplified Toffoli gate, also referred to as Margolus gate.
+
+RC3XGate([label])
+
+The simplified 3-controlled Toffoli gate.
+
+Reset()
+
+Qubit reset.
+
+RGate(theta, phi)
+
+Rotation θ around the cos(φ)x + sin(φ)y axis.
+
+RXGate(theta[, label])
+
+Single-qubit rotation about the X axis.
+
+RXXGate(theta)
+
+A parametric 2-qubit X⊗X interaction (rotation about XX).
+
+RYGate(theta[, label])
+
+Single-qubit rotation about the Y axis.
+
+RYYGate(theta)
+
+A parametric 2-qubit Y⊗Y interaction (rotation about YY).
+
+RZGate(phi[, label])
+
+Single-qubit rotation about the Z axis.
+
+RZZGate(theta)
+
+A parametric 2-qubit Z⊗Z interaction (rotation about ZZ).
+
+RZXGate(theta)
+
+A parametric 2-qubit Z⊗X interaction (rotation about ZX).
+
+ECRGate()
+
+An echoed RZX(pi/2) gate implemented using RZX(pi/4) and RZX(-pi/4).
+
+SGate([label])
+
+Single qubit S gate (Z**0.5).
+
+SdgGate([label])
+
+Single qubit S-adjoint gate (~Z**0.5).
+
+SwapGate([label])
+
+The SWAP gate.
+
+iSwapGate()
+
+iSWAP gate.
+
+SXGate([label])
+
+The single-qubit Sqrt(X) gate (X−−√).
+
+SXdgGate([label])
+
+The inverse single-qubit Sqrt(X) gate.
+
+TGate([label])
+
+Single qubit T gate (Z**0.25).
+
+TdgGate([label])
+
+Single qubit T-adjoint gate (~Z**0.25).
+
+UGate(theta, phi, lam[, label])
+
+Generic single-qubit rotation gate with 3 Euler angles.
+
+U1Gate(theta[, label])
+
+Single-qubit rotation about the Z axis.
+
+U2Gate(phi, lam[, label])
+
+Single-qubit rotation about the X+Z axis.
+
+U3Gate(theta, phi, lam[, label])
+
+Generic single-qubit rotation gate with 3 Euler angles.
+
+XGate([label])
+
+The single-qubit Pauli-X gate (σx).
+
+YGate([label])
+
+The single-qubit Pauli-Y gate (σy).
+
+ZGate([label])
+
+The single-qubit Pauli-Z gate (σz).
+
+Generalized Gates¶
+Diagonal(diag)
+
+Diagonal circuit.
+
+MCMT(gate, num_ctrl_qubits, num_target_qubits)
+
+The multi-controlled multi-target gate, for an arbitrary singly controlled target gate.
+
+MCMTVChain(gate, num_ctrl_qubits, …[, label])
+
+The MCMT implementation using the CCX V-chain.
+
+Permutation(num_qubits[, pattern, seed])
+
+An n_qubit circuit that permutes qubits.
+
+GMS(num_qubits, theta)
+
+Global Mølmer–Sørensen gate.
+
+GR(num_qubits, theta, phi)
+
+Global R gate.
+
+GRX(num_qubits, theta)
+
+Global RX gate.
+
+GRY(num_qubits, theta)
+
+Global RY gate.
+
+GRZ(num_qubits, phi)
+
+Global RZ gate.
+
+RVGate(v_x, v_y, v_z[, basis])
+
+Rotation around arbitrary rotation axis v where |v| is angle of rotation in radians.
+
+PauliGate(label)
+
+A multi-qubit Pauli gate.
+
+Boolean Logic Circuits¶
+AND(num_variable_qubits[, flags, mcx_mode])
+
+A circuit implementing the logical AND operation on a number of qubits.
+
+OR(num_variable_qubits[, flags, mcx_mode])
+
+A circuit implementing the logical OR operation on a number of qubits.
+
+XOR(num_qubits[, amount, seed])
+
+An n_qubit circuit for bitwise xor-ing the input with some integer amount.
+
+InnerProduct(num_qubits)
+
+A 2n-qubit Boolean function that computes the inner product of two n-qubit vectors over F2.
+
+Basis Change Circuits¶
+QFT([num_qubits, approximation_degree, …])
+
+Quantum Fourier Transform Circuit.
+
+Arithmetic Circuits¶
+Amplitude Functions¶
+LinearAmplitudeFunction(num_state_qubits, …)
+
+A circuit implementing a (piecewise) linear function on qubit amplitudes.
+
+Functional Pauli Rotations¶
+FunctionalPauliRotations([num_state_qubits, …])
+
+Base class for functional Pauli rotations.
+
+LinearPauliRotations([num_state_qubits, …])
+
+Linearly-controlled X, Y or Z rotation.
+
+PolynomialPauliRotations([num_state_qubits, …])
+
+A circuit implementing polynomial Pauli rotations.
+
+PiecewiseLinearPauliRotations([…])
+
+Piecewise-linearly-controlled Pauli rotations.
+
+PiecewisePolynomialPauliRotations([…])
+
+Piecewise-polynomially-controlled Pauli rotations.
+
+PiecewiseChebyshev(f_x[, degree, …])
+
+Piecewise Chebyshev approximation to an input function.
+
+Adders¶
+DraperQFTAdder(num_state_qubits[, kind, name])
+
+A circuit that uses QFT to perform in-place addition on two qubit registers.
+
+CDKMRippleCarryAdder(num_state_qubits[, …])
+
+A ripple-carry circuit to perform in-place addition on two qubit registers.
+
+VBERippleCarryAdder(num_state_qubits[, …])
+
+The VBE ripple carry adder [1].
+
+WeightedAdder([num_state_qubits, weights, name])
+
+A circuit to compute the weighted sum of qubit registers.
+
+Multipliers¶
+HRSCumulativeMultiplier(num_state_qubits[, …])
+
+A multiplication circuit to store product of two input registers out-of-place.
+
+RGQFTMultiplier(num_state_qubits[, …])
+
+A QFT multiplication circuit to store product of two input registers out-of-place.
+
+Comparators¶
+IntegerComparator([num_state_qubits, value, …])
+
+Integer Comparator.
+
+Functions on binary variables¶
+QuadraticForm([num_result_qubits, …])
+
+Implements a quadratic form on binary variables encoded in qubit registers.
+
+Amplitude Functions¶
+LinearAmplitudeFunction(num_state_qubits, …)
+
+A circuit implementing a (piecewise) linear function on qubit amplitudes.
+
+Particular Quantum Circuits¶
+FourierChecking(f, g)
+
+Fourier checking circuit.
+
+GraphState(adjacency_matrix)
+
+Circuit to prepare a graph state.
+
+HiddenLinearFunction(adjacency_matrix)
+
+Circuit to solve the hidden linear function problem.
+
+IQP(interactions)
+
+Instantaneous quantum polynomial (IQP) circuit.
+
+QuantumVolume(num_qubits[, depth, seed, …])
+
+A quantum volume model circuit.
+
+PhaseEstimation(num_evaluation_qubits, unitary)
+
+Phase Estimation circuit.
+
+GroverOperator(oracle[, state_preparation, …])
+
+The Grover operator.
+
+PhaseOracle(expression[, synthesizer])
+
+Phase Oracle.
+
+EvolvedOperatorAnsatz([operators, reps, …])
+
+The evolved operator ansatz.
+
+Probability distributions¶
+UniformDistribution(num_qubits[, name])
+
+A circuit to encode a discretized uniform distribution in qubit amplitudes.
+
+NormalDistribution(num_qubits[, mu, sigma, …])
+
+A circuit to encode a discretized normal distribution in qubit amplitudes.
+
+LogNormalDistribution(num_qubits[, mu, …])
+
+A circuit to encode a discretized log-normal distribution in qubit amplitudes.
+
+N-local circuits¶
+NLocal([num_qubits, rotation_blocks, …])
+
+The n-local circuit class.
+
+TwoLocal([num_qubits, rotation_blocks, …])
+
+The two-local circuit.
+
+PauliTwoDesign([num_qubits, reps, seed, …])
+
+The Pauli Two-Design ansatz.
+
+RealAmplitudes([num_qubits, entanglement, …])
+
+The real-amplitudes 2-local circuit.
+
+EfficientSU2([num_qubits, su2_gates, …])
+
+The hardware efficient SU(2) 2-local circuit.
+
+ExcitationPreserving([num_qubits, mode, …])
+
+The heuristic excitation-preserving wave function ansatz.
+
+QAOAAnsatz([cost_operator, reps, …])
+
+A generalized QAOA quantum circuit with a support of custom initial states and mixers.
+
+Data encoding circuits¶
+PauliFeatureMap([feature_dimension, reps, …])
+
+The Pauli Expansion circuit.
+
+ZFeatureMap(feature_dimension[, reps, …])
+
+The first order Pauli Z-evolution circuit.
+
+ZZFeatureMap(feature_dimension[, reps, …])
+
+Second-order Pauli-Z evolution circuit.
+
+NCT (Not-CNOT-Toffoli) template circuits¶
+templates.nct.template_nct_2a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_2a_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_2a_3()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_4a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_4a_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_4a_3()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_4b_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_4b_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_5a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_5a_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_5a_3()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_5a_4()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6a_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6a_3()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6a_4()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6b_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6b_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_6c_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_7a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_7b_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_7c_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_7d_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_7e_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_2a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9a_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_3()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_4()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_5()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_6()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_7()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_8()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_9()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_10()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_11()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9c_12()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_1()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_2()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_3()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_4()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_5()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_6()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_7()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_8()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_9()
+
+returns
+template as a quantum circuit.
+
+templates.nct.template_nct_9d_10()
+
+returns
+template as a quantum circuit.
+
+Clifford template circuits¶
+clifford_2_1()
+
+returns
+template as a quantum circuit.
+
+clifford_2_2()
+
+returns
+template as a quantum circuit.
+
+clifford_2_3()
+
+returns
+template as a quantum circuit.
+
+clifford_2_4()
+
+returns
+template as a quantum circuit.
+
+clifford_3_1()
+
+returns
+template as a quantum circuit.
+
+clifford_4_1()
+
+returns
+template as a quantum circuit.
+
+clifford_4_2()
+
+returns
+template as a quantum circuit.
+
+clifford_4_3()
+
+returns
+template as a quantum circuit.
+
+clifford_4_4()
+
+returns
+template as a quantum circuit.
+
+clifford_5_1()
+
+returns
+template as a quantum circuit.
+
+clifford_6_1()
+
+returns
+template as a quantum circuit.
+
+clifford_6_2()
+
+returns
+template as a quantum circuit.
+
+clifford_6_3()
+
+returns
+template as a quantum circuit.
+
+clifford_6_4()
+
+returns
+template as a quantum circuit.
+
+clifford_6_5()
+
+returns
+template as a quantum circuit.
+
+clifford_8_1()
+
+returns
+template as a quantum circuit.
+
+clifford_8_2()
+
+returns
+template as a quantum circuit.
+
+clifford_8_3()
+
+returns
+template as a quantum circuit.
+
+RZXGate template circuits¶
+rzx_yz([theta])
+
+Template for CX - RYGate - CX.
+
+rzx_xz([theta])
+
+Template for CX - RXGate - CX.
+
+rzx_cy([theta])
+
+Template for CX - RYGate - CX.
+
+rzx_zz1([theta])
+
+Template for CX - RZGate - CX.
+
+rzx_zz2([theta])
+
+Template for CX - RZGate - CX.
+
+rzx_zz3([theta])
+
+Template for CX - RZGate - CX.
