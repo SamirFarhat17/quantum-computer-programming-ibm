@@ -4,6 +4,9 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/openqasm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/qiskit-aer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qiskit-finance" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qiskit-machine-learning" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/qiskit-nature" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qiskit-optimization" vcs="Git" />
   </component>
 </project>
