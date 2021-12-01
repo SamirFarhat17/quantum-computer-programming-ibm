@@ -1,0 +1,667 @@
+· Creating environments
+· Discovering benchmarks
+· Running 74 total benchmarks (1 commits * 1 environments * 74 benchmarks)
+[  0.00%] · For qiskit-aer commit 439c86ae <main>:
+[  0.00%] ·· Benchmarking conda-py3.8
+[ 49.32%] ··· Running (vqe_application.UCCSDBenchmarkSuite.time_statevector--).
+[ 50.00%] ··· Running (vqe_application.UCCSDBenchmarkSuite.time_statevector_gpu--).
+[ 50.68%] ··· ...rithmeticCircuits.track_matrix_product_state                 ok
+[ 50.68%] ··· ==================== ================ ================ ======= ======= =======================
+                  application       measure_method   measure_counts   noise   qubit                         
+              -------------------- ---------------- ---------------- ------- ------- -----------------------
+               integer_comparator      sampling           1000        ideal     5     0.0013129711151123047 
+                 weighted_adder        sampling           1000        ideal     5     0.0030269622802734375 
+                 quadratic_form        sampling           1000        ideal     5     0.0020270347595214844 
+              ==================== ================ ================ ======= ======= =======================
+
+[ 51.35%] ··· basic_05q.ArithmeticCircuits.track_statevector                  ok
+[ 51.35%] ··· ==================== ================ ================ ======= ======= =======================
+                  application       measure_method   measure_counts   noise   qubit                         
+              -------------------- ---------------- ---------------- ------- ------- -----------------------
+               integer_comparator      sampling           1000        ideal     5     0.0013554096221923828 
+                 weighted_adder        sampling           1000        ideal     5     0.0014972686767578125 
+                 quadratic_form        sampling           1000        ideal     5     0.0016570091247558594 
+              ==================== ================ ================ ======= ======= =======================
+
+[ 52.03%] ··· ...05q.ArithmeticCircuits.track_statevector_gpu             failed
+[ 52.03%] ··· ==================== ================ ================ ======= ======= ========
+                  application       measure_method   measure_counts   noise   qubit          
+              -------------------- ---------------- ---------------- ------- ------- --------
+               integer_comparator      sampling           1000        ideal     5     failed 
+                 weighted_adder        sampling           1000        ideal     5     failed 
+                 quadratic_form        sampling           1000        ideal     5     failed 
+              ==================== ================ ================ ======= ======= ========
+
+[ 52.70%] ··· ...sicChangeCircuits.track_matrix_product_state                 ok
+[ 52.70%] ··· ============= ================ ================ ======= ======= ======================
+               application   measure_method   measure_counts   noise   qubit                        
+              ------------- ---------------- ---------------- ------- ------- ----------------------
+                   qft          sampling           1000        ideal     5     0.001046895980834961 
+              ============= ================ ================ ======= ======= ======================
+
+[ 53.38%] ··· basic_05q.BasicChangeCircuits.track_statevector                 ok
+[ 53.38%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   qft          sampling           1000        ideal     5     0.0013859272003173828 
+              ============= ================ ================ ======= ======= =======================
+
+[ 54.05%] ··· ...5q.BasicChangeCircuits.track_statevector_gpu             failed
+[ 54.05%] ··· ============= ================ ================ ======= ======= ========
+               application   measure_method   measure_counts   noise   qubit          
+              ------------- ---------------- ---------------- ------- ------- --------
+                   qft          sampling           1000        ideal     5     failed 
+              ============= ================ ================ ======= ======= ========
+
+[ 54.73%] ··· ...5q.NLocalCircuits.track_matrix_product_state                 ok
+[ 54.73%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  real_amplitudes          sampling           1000        ideal     5     0.0013537406921386719 
+               real_amplitudes_linear      sampling           1000        ideal     5     0.0011458396911621094 
+                   efficient_su2           sampling           1000        ideal     5     0.0010561943054199219 
+                efficient_su2_linear       sampling           1000        ideal     5     0.0011653900146484375 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 55.41%] ··· basic_05q.NLocalCircuits.track_statevector                      ok
+[ 55.41%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  real_amplitudes          sampling           1000        ideal     5      0.001413106918334961 
+               real_amplitudes_linear      sampling           1000        ideal     5     0.0012319087982177734 
+                   efficient_su2           sampling           1000        ideal     5     0.0011644363403320312 
+                efficient_su2_linear       sampling           1000        ideal     5     0.0014526844024658203 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 56.08%] ··· basic_05q.NLocalCircuits.track_statevector_gpu              failed
+[ 56.08%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  real_amplitudes          sampling           1000        ideal     5     failed 
+               real_amplitudes_linear      sampling           1000        ideal     5     failed 
+                   efficient_su2           sampling           1000        ideal     5     failed 
+                efficient_su2_linear       sampling           1000        ideal     5     failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 56.76%] ··· ...arQuantumCircuits.track_matrix_product_state                 ok
+[ 56.76%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling           1000        ideal     5     0.0027740001678466797 
+                    graph_state            sampling           1000        ideal     5     0.0010428428649902344 
+               hidden_linear_function      sampling           1000        ideal     5      0.000993967056274414 
+                        iqp                sampling           1000        ideal     5     0.0022323131561279297 
+                   quantum_volume          sampling           1000        ideal     5     0.0015492439270019531 
+                  phase_estimation         sampling           1000        ideal     5     0.0031685829162597656 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 57.43%] ··· ....ParticularQuantumCircuits.track_statevector                 ok
+[ 57.43%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling           1000        ideal     5     0.0013532638549804688 
+                    graph_state            sampling           1000        ideal     5     0.0016925334930419922 
+               hidden_linear_function      sampling           1000        ideal     5     0.0013129711151123047 
+                        iqp                sampling           1000        ideal     5     0.0021238327026367188 
+                   quantum_volume          sampling           1000        ideal     5     0.0026788711547851562 
+                  phase_estimation         sampling           1000        ideal     5      0.002122640609741211 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 58.11%] ··· ...ticularQuantumCircuits.track_statevector_gpu             failed
+[ 58.11%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  fourier_checking         sampling           1000        ideal     5     failed 
+                    graph_state            sampling           1000        ideal     5     failed 
+               hidden_linear_function      sampling           1000        ideal     5     failed 
+                        iqp                sampling           1000        ideal     5     failed 
+                   quantum_volume          sampling           1000        ideal     5     failed 
+                  phase_estimation         sampling           1000        ideal     5     failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 58.78%] ··· ...rithmeticCircuits.track_matrix_product_state                 ok
+[ 58.78%] ··· ==================== ================ ================ ======= ======= ======================
+                  application       measure_method   measure_counts   noise   qubit                        
+              -------------------- ---------------- ---------------- ------- ------- ----------------------
+               integer_comparator      sampling           1000        ideal     15    0.005268096923828125 
+                 weighted_adder        sampling           1000        ideal     15    0.01074671745300293  
+                 quadratic_form        sampling           1000        ideal     15    0.01969122886657715  
+              ==================== ================ ================ ======= ======= ======================
+
+[ 59.46%] ··· basic_15q.ArithmeticCircuits.track_statevector                  ok
+[ 59.46%] ··· ==================== ================ ================ ======= ======= =======================
+                  application       measure_method   measure_counts   noise   qubit                         
+              -------------------- ---------------- ---------------- ------- ------- -----------------------
+               integer_comparator      sampling           1000        ideal     15     0.001035451889038086 
+                 weighted_adder        sampling           1000        ideal     15    0.0018918514251708984 
+                 quadratic_form        sampling           1000        ideal     15     0.002468585968017578 
+              ==================== ================ ================ ======= ======= =======================
+
+[ 60.14%] ··· ...15q.ArithmeticCircuits.track_statevector_gpu             failed
+[ 60.14%] ··· ==================== ================ ================ ======= ======= ========
+                  application       measure_method   measure_counts   noise   qubit          
+              -------------------- ---------------- ---------------- ------- ------- --------
+               integer_comparator      sampling           1000        ideal     15    failed 
+                 weighted_adder        sampling           1000        ideal     15    failed 
+                 quadratic_form        sampling           1000        ideal     15    failed 
+              ==================== ================ ================ ======= ======= ========
+
+[ 60.81%] ··· ...sicChangeCircuits.track_matrix_product_state                 ok
+[ 60.81%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   qft          sampling           1000        ideal     15    0.0027527809143066406 
+              ============= ================ ================ ======= ======= =======================
+
+[ 61.49%] ··· basic_15q.BasicChangeCircuits.track_statevector                 ok
+[ 61.49%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   qft          sampling           1000        ideal     15    0.0013017654418945312 
+              ============= ================ ================ ======= ======= =======================
+
+[ 62.16%] ··· ...5q.BasicChangeCircuits.track_statevector_gpu             failed
+[ 62.16%] ··· ============= ================ ================ ======= ======= ========
+               application   measure_method   measure_counts   noise   qubit          
+              ------------- ---------------- ---------------- ------- ------- --------
+                   qft          sampling           1000        ideal     15    failed 
+              ============= ================ ================ ======= ======= ========
+
+[ 62.84%] ··· ...5q.NLocalCircuits.track_matrix_product_state                 ok
+[ 62.84%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  real_amplitudes          sampling           1000        ideal     15     0.00443267822265625  
+               real_amplitudes_linear      sampling           1000        ideal     15    0.0017933845520019531 
+                   efficient_su2           sampling           1000        ideal     15    0.0033731460571289062 
+                efficient_su2_linear       sampling           1000        ideal     15    0.0017962455749511719 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 63.51%] ··· basic_15q.NLocalCircuits.track_statevector                      ok
+[ 63.51%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  real_amplitudes          sampling           1000        ideal     15     0.00468897819519043  
+               real_amplitudes_linear      sampling           1000        ideal     15     0.002048015594482422 
+                   efficient_su2           sampling           1000        ideal     15    0.0022859573364257812 
+                efficient_su2_linear       sampling           1000        ideal     15    0.0025496482849121094 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 64.19%] ··· basic_15q.NLocalCircuits.track_statevector_gpu              failed
+[ 64.19%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  real_amplitudes          sampling           1000        ideal     15    failed 
+               real_amplitudes_linear      sampling           1000        ideal     15    failed 
+                   efficient_su2           sampling           1000        ideal     15    failed 
+                efficient_su2_linear       sampling           1000        ideal     15    failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 64.86%] ··· ...arQuantumCircuits.track_matrix_product_state                 ok
+[ 64.86%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling           1000        ideal     15       2.12536358833313   
+                    graph_state            sampling           1000        ideal     15    0.0016903877258300781 
+               hidden_linear_function      sampling           1000        ideal     15      0.0013885498046875  
+                        iqp                sampling           1000        ideal     15      0.0214996337890625  
+                   quantum_volume          sampling           1000        ideal     15     0.00601649284362793  
+                  phase_estimation         sampling           1000        ideal     15      0.0758974552154541  
+              ======================== ================ ================ ======= ======= =======================
+
+[ 65.54%] ··· ....ParticularQuantumCircuits.track_statevector                 ok
+[ 65.54%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling           1000        ideal     15    0.0033791065216064453 
+                    graph_state            sampling           1000        ideal     15    0.0011510848999023438 
+               hidden_linear_function      sampling           1000        ideal     15    0.0011539459228515625 
+                        iqp                sampling           1000        ideal     15     0.005004405975341797 
+                   quantum_volume          sampling           1000        ideal     15    0.0014655590057373047 
+                  phase_estimation         sampling           1000        ideal     15    0.0009007453918457031 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 66.22%] ··· ...ticularQuantumCircuits.track_statevector_gpu             failed
+[ 66.22%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  fourier_checking         sampling           1000        ideal     15    failed 
+                    graph_state            sampling           1000        ideal     15    failed 
+               hidden_linear_function      sampling           1000        ideal     15    failed 
+                        iqp                sampling           1000        ideal     15    failed 
+                   quantum_volume          sampling           1000        ideal     15    failed 
+                  phase_estimation         sampling           1000        ideal     15    failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 66.89%] ··· ...rithmeticCircuits.track_matrix_product_state             failed
+[ 66.89%] ··· ==================== ================ ================ ======= ======= ========
+                  application       measure_method   measure_counts   noise   qubit          
+              -------------------- ---------------- ---------------- ------- ------- --------
+               integer_comparator      sampling           1000        ideal     25    failed 
+                 weighted_adder        sampling           1000        ideal     25    failed 
+                 quadratic_form        sampling           1000        ideal     25    failed 
+              ==================== ================ ================ ======= ======= ========
+
+[ 67.57%] ··· basic_25q.ArithmeticCircuits.track_statevector          1/3 failed
+[ 67.57%] ··· ==================== ================ ================ ======= ======= =======================
+                  application       measure_method   measure_counts   noise   qubit                         
+              -------------------- ---------------- ---------------- ------- ------- -----------------------
+               integer_comparator      sampling           1000        ideal     25    0.0011327266693115234 
+                 weighted_adder        sampling           1000        ideal     25            failed        
+                 quadratic_form        sampling           1000        ideal     25     0.00393223762512207  
+              ==================== ================ ================ ======= ======= =======================
+
+[ 68.24%] ··· ...25q.ArithmeticCircuits.track_statevector_gpu             failed
+[ 68.24%] ··· ==================== ================ ================ ======= ======= ========
+                  application       measure_method   measure_counts   noise   qubit          
+              -------------------- ---------------- ---------------- ------- ------- --------
+               integer_comparator      sampling           1000        ideal     25    failed 
+                 weighted_adder        sampling           1000        ideal     25    failed 
+                 quadratic_form        sampling           1000        ideal     25    failed 
+              ==================== ================ ================ ======= ======= ========
+
+[ 68.92%] ··· ...sicChangeCircuits.track_matrix_product_state             failed
+[ 68.92%] ··· ============= ================ ================ ======= ======= ========
+               application   measure_method   measure_counts   noise   qubit          
+              ------------- ---------------- ---------------- ------- ------- --------
+                   qft          sampling           1000        ideal     25    failed 
+              ============= ================ ================ ======= ======= ========
+
+[ 69.59%] ··· basic_25q.BasicChangeCircuits.track_statevector                 ok
+[ 69.59%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   qft          sampling           1000        ideal     25    0.0016672611236572266 
+              ============= ================ ================ ======= ======= =======================
+
+[ 70.27%] ··· ...5q.BasicChangeCircuits.track_statevector_gpu             failed
+[ 70.27%] ··· ============= ================ ================ ======= ======= ========
+               application   measure_method   measure_counts   noise   qubit          
+              ------------- ---------------- ---------------- ------- ------- --------
+                   qft          sampling           1000        ideal     25    failed 
+              ============= ================ ================ ======= ======= ========
+
+[ 70.95%] ··· ...5q.NLocalCircuits.track_matrix_product_state             failed
+[ 70.95%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  real_amplitudes          sampling           1000        ideal     25    failed 
+               real_amplitudes_linear      sampling           1000        ideal     25    failed 
+                   efficient_su2           sampling           1000        ideal     25    failed 
+                efficient_su2_linear       sampling           1000        ideal     25    failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 71.62%] ··· basic_25q.NLocalCircuits.track_statevector                      ok
+[ 71.62%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  real_amplitudes          sampling           1000        ideal     25     0.01762986183166504  
+               real_amplitudes_linear      sampling           1000        ideal     25    0.0029020309448242188 
+                   efficient_su2           sampling           1000        ideal     25     0.004508018493652344 
+                efficient_su2_linear       sampling           1000        ideal     25    0.0037508010864257812 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 72.30%] ··· basic_25q.NLocalCircuits.track_statevector_gpu              failed
+[ 72.30%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  real_amplitudes          sampling           1000        ideal     25    failed 
+               real_amplitudes_linear      sampling           1000        ideal     25    failed 
+                   efficient_su2           sampling           1000        ideal     25    failed 
+                efficient_su2_linear       sampling           1000        ideal     25    failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 72.97%] ··· ...arQuantumCircuits.track_matrix_product_state             failed
+[ 72.97%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  fourier_checking         sampling           1000        ideal     25    failed 
+                    graph_state            sampling           1000        ideal     25    failed 
+               hidden_linear_function      sampling           1000        ideal     25    failed 
+                        iqp                sampling           1000        ideal     25    failed 
+                   quantum_volume          sampling           1000        ideal     25    failed 
+                  phase_estimation         sampling           1000        ideal     25    failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 73.65%] ··· ....ParticularQuantumCircuits.track_statevector         1/6 failed
+[ 73.65%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling           1000        ideal     25            failed        
+                    graph_state            sampling           1000        ideal     25    0.0011761188507080078 
+               hidden_linear_function      sampling           1000        ideal     25    0.0011746883392333984 
+                        iqp                sampling           1000        ideal     25     0.01299595832824707  
+                   quantum_volume          sampling           1000        ideal     25    0.0021126270294189453 
+                  phase_estimation         sampling           1000        ideal     25    0.0010945796966552734 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 74.32%] ··· ...ticularQuantumCircuits.track_statevector_gpu             failed
+[ 74.32%] ··· ======================== ================ ================ ======= ======= ========
+                    application         measure_method   measure_counts   noise   qubit          
+              ------------------------ ---------------- ---------------- ------- ------- --------
+                  fourier_checking         sampling           1000        ideal     25    failed 
+                    graph_state            sampling           1000        ideal     25    failed 
+               hidden_linear_function      sampling           1000        ideal     25    failed 
+                        iqp                sampling           1000        ideal     25    failed 
+                   quantum_volume          sampling           1000        ideal     25    failed 
+                  phase_estimation         sampling           1000        ideal     25    failed 
+              ======================== ================ ================ ======= ======= ========
+
+[ 75.00%] ··· noise_12q.DampingError.track_density_matrix                     ok
+[ 75.00%] ··· ================ ================ ================ ========= ======= =======================
+                application     measure_method   measure_counts    noise    qubit                         
+              ---------------- ---------------- ---------------- --------- ------- -----------------------
+               quantum_volume      sampling           1000        damping     12    0.0020668506622314453 
+              ================ ================ ================ ========= ======= =======================
+
+[ 75.68%] ··· noise_12q.DampingError.track_density_matrix_gpu             failed
+[ 75.68%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     12    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 76.35%] ··· noise_12q.DampingError.track_statevector                        ok
+[ 76.35%] ··· ================ ================ ================ ========= ======= =====================
+                application     measure_method   measure_counts    noise    qubit                       
+              ---------------- ---------------- ---------------- --------- ------- ---------------------
+               quantum_volume      sampling           1000        damping     12    0.08568358421325684 
+              ================ ================ ================ ========= ======= =====================
+
+[ 77.03%] ··· noise_12q.DampingError.track_statevector_gpu                failed
+[ 77.03%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     12    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 77.70%] ··· ...e_12q.DepolarizingError.track_density_matrix                 ok
+[ 77.70%] ··· ================ ================ ================ ============== ======= =====================
+                application     measure_method   measure_counts      noise       qubit                       
+              ---------------- ---------------- ---------------- -------------- ------- ---------------------
+               quantum_volume      sampling           1000        depolarizing     12    0.09740042686462402 
+              ================ ================ ================ ============== ======= =====================
+
+[ 78.38%] ··· ...q.DepolarizingError.track_density_matrix_gpu             failed
+[ 78.38%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     12    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 79.05%] ··· noise_12q.DepolarizingError.track_statevector                   ok
+[ 79.05%] ··· ================ ================ ================ ============== ======= =====================
+                application     measure_method   measure_counts      noise       qubit                       
+              ---------------- ---------------- ---------------- -------------- ------- ---------------------
+               quantum_volume      sampling           1000        depolarizing     12    0.09565901756286621 
+              ================ ================ ================ ============== ======= =====================
+
+[ 79.73%] ··· ..._12q.DepolarizingError.track_statevector_gpu             failed
+[ 79.73%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     12    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 80.41%] ··· noise_16q.DampingError.track_density_matrix                 failed
+[ 80.41%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     16    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 81.08%] ··· noise_16q.DampingError.track_density_matrix_gpu             failed
+[ 81.08%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     16    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 81.76%] ··· noise_16q.DampingError.track_statevector                        ok
+[ 81.76%] ··· ================ ================ ================ ========= ======= =====================
+                application     measure_method   measure_counts    noise    qubit                       
+              ---------------- ---------------- ---------------- --------- ------- ---------------------
+               quantum_volume      sampling           1000        damping     16    0.08701324462890625 
+              ================ ================ ================ ========= ======= =====================
+
+[ 82.43%] ··· noise_16q.DampingError.track_statevector_gpu                failed
+[ 82.43%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     16    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 83.11%] ··· ...e_16q.DepolarizingError.track_density_matrix             failed
+[ 83.11%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     16    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 83.78%] ··· ...q.DepolarizingError.track_density_matrix_gpu             failed
+[ 83.78%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     16    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 84.46%] ··· noise_16q.DepolarizingError.track_statevector                   ok
+[ 84.46%] ··· ================ ================ ================ ============== ======= ================
+                application     measure_method   measure_counts      noise       qubit                  
+              ---------------- ---------------- ---------------- -------------- ------- ----------------
+               quantum_volume      sampling           1000        depolarizing     16    0.093017578125 
+              ================ ================ ================ ============== ======= ================
+
+[ 85.14%] ··· ..._16q.DepolarizingError.track_statevector_gpu             failed
+[ 85.14%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     16    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 85.81%] ··· noise_20q.DampingError.track_density_matrix                 failed
+[ 85.81%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     20    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 86.49%] ··· noise_20q.DampingError.track_density_matrix_gpu             failed
+[ 86.49%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     20    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 87.16%] ··· noise_20q.DampingError.track_statevector                        ok
+[ 87.16%] ··· ================ ================ ================ ========= ======= =====================
+                application     measure_method   measure_counts    noise    qubit                       
+              ---------------- ---------------- ---------------- --------- ------- ---------------------
+               quantum_volume      sampling           1000        damping     20    0.10693573951721191 
+              ================ ================ ================ ========= ======= =====================
+
+[ 87.84%] ··· noise_20q.DampingError.track_statevector_gpu                failed
+[ 87.84%] ··· ================ ================ ================ ========= ======= ========
+                application     measure_method   measure_counts    noise    qubit          
+              ---------------- ---------------- ---------------- --------- ------- --------
+               quantum_volume      sampling           1000        damping     20    failed 
+              ================ ================ ================ ========= ======= ========
+
+[ 88.51%] ··· ...e_20q.DepolarizingError.track_density_matrix             failed
+[ 88.51%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     20    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 89.19%] ··· ...q.DepolarizingError.track_density_matrix_gpu             failed
+[ 89.19%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     20    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 89.86%] ··· noise_20q.DepolarizingError.track_statevector                   ok
+[ 89.86%] ··· ================ ================ ================ ============== ======= =====================
+                application     measure_method   measure_counts      noise       qubit                       
+              ---------------- ---------------- ---------------- -------------- ------- ---------------------
+               quantum_volume      sampling           1000        depolarizing     20    0.09997034072875977 
+              ================ ================ ================ ============== ======= =====================
+
+[ 90.54%] ··· ..._20q.DepolarizingError.track_statevector_gpu             failed
+[ 90.54%] ··· ================ ================ ================ ============== ======= ========
+                application     measure_method   measure_counts      noise       qubit          
+              ---------------- ---------------- ---------------- -------------- ------- --------
+               quantum_volume      sampling           1000        depolarizing     20    failed 
+              ================ ================ ================ ============== ======= ========
+
+[ 91.22%] ··· output_05q.ExpVal.track_statevector                             ok
+[ 91.22%] ··· ================ ================ ================ ======= ======= =======================
+                application     measure_method   measure_counts   noise   qubit                         
+              ---------------- ---------------- ---------------- ------- ------- -----------------------
+               quantum_volume       expval             1          ideal     5     0.0014646053314208984 
+               quantum_volume       expval             10         ideal     5       0.002716064453125   
+               quantum_volume       expval            100         ideal     5     0.0019276142120361328 
+               quantum_volume       expval            1000        ideal     5     0.0018589496612548828 
+               quantum_volume       expval           10000        ideal     5     0.0017757415771484375 
+              ================ ================ ================ ======= ======= =======================
+
+[ 91.89%] ··· output_05q.ExpVal.track_statevector_gpu                     failed
+[ 91.89%] ··· ================ ================ ================ ======= ======= ========
+                application     measure_method   measure_counts   noise   qubit          
+              ---------------- ---------------- ---------------- ------- ------- --------
+               quantum_volume       expval             1          ideal     5     failed 
+               quantum_volume       expval             10         ideal     5     failed 
+               quantum_volume       expval            100         ideal     5     failed 
+               quantum_volume       expval            1000        ideal     5     failed 
+               quantum_volume       expval           10000        ideal     5     failed 
+              ================ ================ ================ ======= ======= ========
+
+[ 92.57%] ··· output_05q.Sampling.track_statevector                           ok
+[ 92.57%] ··· ================ ================ ================ ======= ======= =======================
+                application     measure_method   measure_counts   noise   qubit                         
+              ---------------- ---------------- ---------------- ------- ------- -----------------------
+               quantum_volume      sampling            1          ideal     5      0.002177000045776367 
+               quantum_volume      sampling            10         ideal     5     0.0017962455749511719 
+               quantum_volume      sampling           100         ideal     5     0.0014450550079345703 
+               quantum_volume      sampling           1000        ideal     5     0.0021948814392089844 
+               quantum_volume      sampling          10000        ideal     5     0.0015633106231689453 
+              ================ ================ ================ ======= ======= =======================
+
+[ 93.24%] ··· output_05q.Sampling.track_statevector_gpu                   failed
+[ 93.24%] ··· ================ ================ ================ ======= ======= ========
+                application     measure_method   measure_counts   noise   qubit          
+              ---------------- ---------------- ---------------- ------- ------- --------
+               quantum_volume      sampling            1          ideal     5     failed 
+               quantum_volume      sampling            10         ideal     5     failed 
+               quantum_volume      sampling           100         ideal     5     failed 
+               quantum_volume      sampling           1000        ideal     5     failed 
+               quantum_volume      sampling          10000        ideal     5     failed 
+              ================ ================ ================ ======= ======= ========
+
+[ 93.92%] ··· output_15q.ExpVal.track_statevector                             ok
+[ 93.92%] ··· ================ ================ ================ ======= ======= =======================
+                application     measure_method   measure_counts   noise   qubit                         
+              ---------------- ---------------- ---------------- ------- ------- -----------------------
+               quantum_volume       expval             1          ideal     15     0.001519918441772461 
+               quantum_volume       expval             10         ideal     15    0.0015876293182373047 
+               quantum_volume       expval            100         ideal     15    0.0014743804931640625 
+               quantum_volume       expval            1000        ideal     15    0.0015425682067871094 
+               quantum_volume       expval           10000        ideal     15    0.0015978813171386719 
+              ================ ================ ================ ======= ======= =======================
+
+[ 94.59%] ··· output_15q.ExpVal.track_statevector_gpu                     failed
+[ 94.59%] ··· ================ ================ ================ ======= ======= ========
+                application     measure_method   measure_counts   noise   qubit          
+              ---------------- ---------------- ---------------- ------- ------- --------
+               quantum_volume       expval             1          ideal     15    failed 
+               quantum_volume       expval             10         ideal     15    failed 
+               quantum_volume       expval            100         ideal     15    failed 
+               quantum_volume       expval            1000        ideal     15    failed 
+               quantum_volume       expval           10000        ideal     15    failed 
+              ================ ================ ================ ======= ======= ========
+
+[ 95.27%] ··· output_15q.Sampling.track_statevector                           ok
+[ 95.27%] ··· ================ ================ ================ ======= ======= =======================
+                application     measure_method   measure_counts   noise   qubit                         
+              ---------------- ---------------- ---------------- ------- ------- -----------------------
+               quantum_volume      sampling            1          ideal     15     0.001665353775024414 
+               quantum_volume      sampling            10         ideal     15    0.0015861988067626953 
+               quantum_volume      sampling           100         ideal     15    0.0015561580657958984 
+               quantum_volume      sampling           1000        ideal     15    0.0015985965728759766 
+               quantum_volume      sampling          10000        ideal     15    0.0017120838165283203 
+              ================ ================ ================ ======= ======= =======================
+
+[ 95.95%] ··· output_15q.Sampling.track_statevector_gpu                   failed
+[ 95.95%] ··· ================ ================ ================ ======= ======= ========
+                application     measure_method   measure_counts   noise   qubit          
+              ---------------- ---------------- ---------------- ------- ------- --------
+               quantum_volume      sampling            1          ideal     15    failed 
+               quantum_volume      sampling            10         ideal     15    failed 
+               quantum_volume      sampling           100         ideal     15    failed 
+               quantum_volume      sampling           1000        ideal     15    failed 
+               quantum_volume      sampling          10000        ideal     15    failed 
+              ================ ================ ================ ======= ======= ========
+
+[ 96.62%] ··· output_25q.ExpVal.track_statevector                             ok
+[ 96.62%] ··· ================ ================ ================ ======= ======= =======================
+                application     measure_method   measure_counts   noise   qubit                         
+              ---------------- ---------------- ---------------- ------- ------- -----------------------
+               quantum_volume       expval             1          ideal     25    0.0021126270294189453 
+               quantum_volume       expval             10         ideal     25    0.0019779205322265625 
+               quantum_volume       expval            100         ideal     25    0.0020160675048828125 
+               quantum_volume       expval            1000        ideal     25    0.0020580291748046875 
+               quantum_volume       expval           10000        ideal     25    0.0021746158599853516 
+              ================ ================ ================ ======= ======= =======================
+
+[ 97.30%] ··· output_25q.ExpVal.track_statevector_gpu                     failed
+[ 97.30%] ··· ================ ================ ================ ======= ======= ========
+                application     measure_method   measure_counts   noise   qubit          
+              ---------------- ---------------- ---------------- ------- ------- --------
+               quantum_volume       expval             1          ideal     25    failed 
+               quantum_volume       expval             10         ideal     25    failed 
+               quantum_volume       expval            100         ideal     25    failed 
+               quantum_volume       expval            1000        ideal     25    failed 
+               quantum_volume       expval           10000        ideal     25    failed 
+              ================ ================ ================ ======= ======= ========
+
+[ 97.97%] ··· output_25q.Sampling.track_statevector                           ok
+[ 97.97%] ··· ================ ================ ================ ======= ======= =======================
+                application     measure_method   measure_counts   noise   qubit                         
+              ---------------- ---------------- ---------------- ------- ------- -----------------------
+               quantum_volume      sampling            1          ideal     25     0.002623319625854492 
+               quantum_volume      sampling            10         ideal     25    0.0020825862884521484 
+               quantum_volume      sampling           100         ideal     25     0.002376079559326172 
+               quantum_volume      sampling           1000        ideal     25    0.0022144317626953125 
+               quantum_volume      sampling          10000        ideal     25    0.0025873184204101562 
+              ================ ================ ================ ======= ======= =======================
+
+[ 98.65%] ··· output_25q.Sampling.track_statevector_gpu                   failed
+[ 98.65%] ··· ================ ================ ================ ======= ======= ========
+                application     measure_method   measure_counts   noise   qubit          
+              ---------------- ---------------- ---------------- ------- ------- --------
+               quantum_volume      sampling            1          ideal     25    failed 
+               quantum_volume      sampling            10         ideal     25    failed 
+               quantum_volume      sampling           100         ideal     25    failed 
+               quantum_volume      sampling           1000        ideal     25    failed 
+               quantum_volume      sampling          10000        ideal     25    failed 
+              ================ ================ ================ ======= ======= ========
+
+[ 99.32%] ··· ...ication.UCCSDBenchmarkSuite.time_statevector                 ok
+[ 99.32%] ··· ===== ============
+               mol              
+              ----- ------------
+                H2   1.34±0.06s 
+               LiH   1.87±0.03m 
+                HF   37.8±0.5s  
+              ===== ============
+
+[100.00%] ··· ...ion.UCCSDBenchmarkSuite.time_statevector_gpu             failed
+[100.00%] ··· ===== ========
+               mol          
+              ----- --------
+                H2   failed 
+               LiH   failed 
+                HF   failed 
+              ===== ========
+

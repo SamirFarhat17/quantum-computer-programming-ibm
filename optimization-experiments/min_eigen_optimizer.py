@@ -39,4 +39,54 @@ exact_result = exact.solve(qubo)
 # print(exact_result)
 
 qaoa_result = qaoa.solve(qubo)
-print(qaoa_result)
+#print(qaoa_result)
+
+print('variable order:', [var.name for var in qaoa_result.variables])
+for s in qaoa_result.samples:
+    print(s)
+
+
+def get_filtered_samples(samples: List[SolutionSample],
+                         threshold: float = 0,
+                         allowed_status: Tuple[OptimizationResultStatus] = (OptimizationResultStatus.SUCCESS,)):
+    res = []
+    for s in samples:
+        if s.status in allowed_status and s.probability > threshold:
+            res.append(s)
+
+    return res
+filtered_samples = get_filtered_samples(qaoa_result.samples,
+                                        threshold=0.005,
+                                        allowed_status=(OptimizationResultStatus.SUCCESS,))
+for s in filtered_samples:
+    print(s)
+
+fvals = [s.fval for s in qaoa_result.samples]
+probabilities = [s.probability for s in qaoa_result.samples]
+np.mean(fvals)
+
+np.std(fvals)
+
+samples_for_plot = {' '.join(f'{qaoa_result.variables[i].name}={int(v)}'
+                             for i, v in enumerate(s.x)): s.probability
+                    for s in filtered_samples}
+samples_for_plot
+
+p = plot_histogram(samples_for_plot)
+p.savefig('histogram.png')
+
+# Recursive Min Eigen Optimizer
+rqaoa = RecursiveMinimumEigenOptimizer(qaoa, min_num_vars=1, min_num_vars_optimizer=exact)
+rqaoa_result = rqaoa.solve(qubo)
+print(rqaoa_result)
+
+iltered_samples = get_filtered_samples(rqaoa_result.samples,
+                                        threshold=0.005,
+                                        allowed_status=(OptimizationResultStatus.SUCCESS,))
+samples_for_plot = {' '.join(f'{rqaoa_result.variables[i].name}={int(v)}'
+                             for i, v in enumerate(s.x)): s.probability
+                    for s in filtered_samples}
+print(samples_for_plot)
+
+po = plot_histogram(samples_for_plot)
+po.savefig('rec_histogram')
