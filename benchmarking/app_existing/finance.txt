@@ -1,0 +1,12 @@
+make -C finance asv ASVCMD=run ASVOPTS=""
+make[1]: Entering directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/finance'
+python -m asv run  || true
+· Cloning project
+· Fetching recent changes
+· Creating environments
+· Discovering benchmarks
+·· Uninstalling from virtualenv-py3.8-cplex-cvxpy-gurobipy-matplotlib
+·· Building e04c02b2 <main> for virtualenv-py3.8-cplex-cvxpy-gurobipy-matplotlib
+·· Installing e04c02b2 <main> into virtualenv-py3.8-cplex-cvxpy-gurobipy-matplotlib
+· No benchmarks selected
+make[1]: Leaving directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/finance'

@@ -1,0 +1,119 @@
+make -C machine_learning asv ASVCMD=run ASVOPTS=""
+make[1]: Entering directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/machine_learning'
+python -m asv run  || true
+· Cloning project
+· Fetching recent changes
+· Creating environments
+· Discovering benchmarks
+·· Uninstalling from virtualenv-py3.8-sparse-torch
+·· Building c27715a4 <main> for virtualenv-py3.8-sparse-torch
+·· Installing c27715a4 <main> into virtualenv-py3.8-sparse-torch
+· Running 9 total benchmarks (1 commits * 1 environments * 9 benchmarks)
+[  0.00%] · For qiskit-machine-learning commit c27715a4 <main>:
+[  0.00%] ·· Benchmarking virtualenv-py3.8-sparse-torch
+[  5.56%] ··· Running (circuit_qnn_classifier_benchmark.CircuitQnnClassifierBenchmarks.time_predict_circuit_qnn_classifier--).
+[ 11.11%] ··· Running (circuit_qnn_classifier_benchmark.CircuitQnnClassifierBenchmarks.time_score_circuit_qnn_classifier--).
+[ 16.67%] ··· Running (circuit_qnn_classifier_fit_benchmark.CircuitQnnFitClassifierBenchmarks.time_fit_circuit_qnn_classifier--).
+[ 22.22%] ··· Running (opflow_qnn_classifier_benchmark.OpflowQnnClassifierBenchmarks.time_predict_opflow_qnn_classifier--).
+[ 27.78%] ··· Running (opflow_qnn_classifier_benchmark.OpflowQnnClassifierBenchmarks.time_score_opflow_qnn_classifier--).
+[ 33.33%] ··· Running (opflow_qnn_classifier_fit_benchmark.OpflowQnnFitClassifierBenchmarks.time_fit_opflow_qnn_classifier--).
+[ 38.89%] ··· Running (vqc_benchmark.VqcBenchmarks.time_predict_vqc--).
+[ 44.44%] ··· Running (vqc_benchmark.VqcBenchmarks.time_score_vqc--).
+[ 50.00%] ··· Running (vqc_fit_benchmark.VqcFitBenchmarks.time_fit_vqc--).
+[ 55.56%] ··· ...nchmarks.time_predict_circuit_qnn_classifier                 ok
+[ 55.56%] ··· ============== ================ =======================
+              --                              param2                 
+              -------------- ----------------------------------------
+               backend name   qasm_simulator   statevector_simulator 
+              ============== ================ =======================
+                dataset_1       91.3±20ms            82.8±10ms       
+              ============== ================ =======================
+
+[ 61.11%] ··· ...Benchmarks.time_score_circuit_qnn_classifier                 ok
+[ 61.11%] ··· ============== ================ =======================
+              --                              param2                 
+              -------------- ----------------------------------------
+               backend name   qasm_simulator   statevector_simulator 
+              ============== ================ =======================
+                dataset_1       94.8±10ms             76.1±4ms       
+              ============== ================ =======================
+
+[ 66.67%] ··· ...erBenchmarks.time_fit_circuit_qnn_classifier                 ok
+[ 66.67%] ··· ============== ======================= ============= ============
+               backend name         optimizer            param3                
+              -------------- ----------------------- ------------- ------------
+                dataset_1         qasm_simulator         cobyla     4.93±0.06s 
+                dataset_1         qasm_simulator      nelder-mead   11.6±0.5s  
+                dataset_1         qasm_simulator        l-bfgs-b    22.2±0.03s 
+                dataset_1     statevector_simulator      cobyla     7.50±0.1s  
+                dataset_1     statevector_simulator   nelder-mead   19.6±0.8s  
+                dataset_1     statevector_simulator     l-bfgs-b     21.9±3s   
+              ============== ======================= ============= ============
+
+[ 72.22%] ··· ...enchmarks.time_predict_opflow_qnn_classifier                 ok
+[ 72.22%] ··· ============== ================ =======================
+              --                              param2                 
+              -------------- ----------------------------------------
+               backend name   qasm_simulator   statevector_simulator 
+              ============== ================ =======================
+                dataset_1        123±7ms              93.4±1ms       
+              ============== ================ =======================
+
+[ 77.78%] ··· ...rBenchmarks.time_score_opflow_qnn_classifier                 ok
+[ 77.78%] ··· ============== ================ =======================
+              --                              param2                 
+              -------------- ----------------------------------------
+               backend name   qasm_simulator   statevector_simulator 
+              ============== ================ =======================
+                dataset_1        111±9ms             107±0.4ms       
+              ============== ================ =======================
+
+[ 83.33%] ··· ...ierBenchmarks.time_fit_opflow_qnn_classifier                 ok
+[ 83.33%] ··· ============== ======================= ============= ===========
+               backend name         optimizer            param3               
+              -------------- ----------------------- ------------- -----------
+                dataset_1         qasm_simulator         cobyla     10.5±0.6s 
+                dataset_1         qasm_simulator      nelder-mead    25.6±1s  
+                dataset_1         qasm_simulator        l-bfgs-b     28.9±2s  
+                dataset_1     statevector_simulator      cobyla     12.8±0.4s 
+                dataset_1     statevector_simulator   nelder-mead    57.1±10s 
+                dataset_1     statevector_simulator     l-bfgs-b     29.5±4s  
+              ============== ======================= ============= ===========
+
+[ 88.89%] ··· vqc_benchmark.VqcBenchmarks.time_predict_vqc                    ok
+[ 88.89%] ··· ============== ================ =======================
+              --                              param2                 
+              -------------- ----------------------------------------
+               backend name   qasm_simulator   statevector_simulator 
+              ============== ================ =======================
+                dataset_1       94.1±0.7ms           78.9±0.9ms      
+              ============== ================ =======================
+
+[ 94.44%] ··· vqc_benchmark.VqcBenchmarks.time_score_vqc                      ok
+[ 94.44%] ··· ============== ================ =======================
+              --                              param2                 
+              -------------- ----------------------------------------
+               backend name   qasm_simulator   statevector_simulator 
+              ============== ================ =======================
+                dataset_1        93.8±1ms             77.0±1ms       
+              ============== ================ =======================
+
+[100.00%] ··· vqc_fit_benchmark.VqcFitBenchmarks.time_fit_vqc                 ok
+[100.00%] ··· ============== ======================= =============== =============== ============
+               backend name         optimizer         loss function       param4                 
+              -------------- ----------------------- --------------- --------------- ------------
+                dataset_1         qasm_simulator          cobyla      cross_entropy   4.52±0.1s  
+                dataset_1         qasm_simulator          cobyla      squared_error   4.63±0.1s  
+                dataset_1         qasm_simulator       nelder-mead    cross_entropy   9.37±0.06s 
+                dataset_1         qasm_simulator       nelder-mead    squared_error   10.7±0.4s  
+                dataset_1         qasm_simulator         l-bfgs-b     cross_entropy    23.1±1s   
+                dataset_1         qasm_simulator         l-bfgs-b     squared_error    24.7±3s   
+                dataset_1     statevector_simulator       cobyla      cross_entropy    34.8±9s   
+                dataset_1     statevector_simulator       cobyla      squared_error   7.35±0.4s  
+                dataset_1     statevector_simulator    nelder-mead    cross_entropy    25.3±1s   
+                dataset_1     statevector_simulator    nelder-mead    squared_error    26.6±2s   
+                dataset_1     statevector_simulator      l-bfgs-b     cross_entropy    24.3±3s   
+                dataset_1     statevector_simulator      l-bfgs-b     squared_error    30.1±2s   
+              ============== ======================= =============== =============== ============
+
+make[1]: Leaving directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/machine_learning'

@@ -1,0 +1,71 @@
+make -C nature asv ASVCMD=run ASVOPTS=""
+make[1]: Entering directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/nature'
+python -m asv run  || true
+· Cloning project
+· Fetching recent changes
+· Creating environments
+· Discovering benchmarks
+·· Uninstalling from virtualenv-py3.8-pyscf
+·· Building 4c24788a <main> for virtualenv-py3.8-pyscf
+·· Installing 4c24788a <main> into virtualenv-py3.8-pyscf
+· Running 3 total benchmarks (1 commits * 1 environments * 3 benchmarks)
+[  0.00%] · For qiskit-nature commit 4c24788a <main>:
+[  0.00%] ·· Benchmarking virtualenv-py3.8-pyscf
+[ 16.67%] ··· Running (protein_folding_problem_benchmark.ProteinFoldingProblemBenchmarks.time_generate_compressed_qubit_operator--).
+[ 33.33%] ··· Running (protein_folding_problem_benchmark.ProteinFoldingProblemBenchmarks.time_generate_full_qubit_operator--).
+[ 50.00%] ··· Running (protein_folding_problem_benchmark.ProteinFoldingProblemBenchmarks.time_generate_peptide--).
+[ 66.67%] ··· ...arks.time_generate_compressed_qubit_operator                 ok
+[ 66.67%] ··· ======================= ============================= ============
+                      peptide                interaction type                   
+              ----------------------- ----------------------------- ------------
+                    Neuropeptide       MiyazawaJerniganInteraction    96.0±2ms  
+                    Neuropeptide            RandomInteraction         94.4±8ms  
+                    Neuropeptide             MixedInteraction         103±10ms  
+               NeuropeptideDummySide   MiyazawaJerniganInteraction    243±10ms  
+               NeuropeptideDummySide        RandomInteraction         255±10ms  
+               NeuropeptideDummySide         MixedInteraction         242±10ms  
+                    Angiotensin        MiyazawaJerniganInteraction   1.29±0.07s 
+                    Angiotensin             RandomInteraction        1.23±0.04s 
+                    Angiotensin              MixedInteraction        1.43±0.2s  
+                AngiotensinDummySide   MiyazawaJerniganInteraction   3.05±0.2s  
+                AngiotensinDummySide        RandomInteraction        3.07±0.2s  
+                AngiotensinDummySide         MixedInteraction        3.06±0.3s  
+              ======================= ============================= ============
+
+[ 83.33%] ··· ...Benchmarks.time_generate_full_qubit_operator                 ok
+[ 83.33%] ··· ======================= ============================= ============
+                      peptide                interaction type                   
+              ----------------------- ----------------------------- ------------
+                    Neuropeptide       MiyazawaJerniganInteraction    86.0±7ms  
+                    Neuropeptide            RandomInteraction        78.9±10ms  
+                    Neuropeptide             MixedInteraction         81.7±5ms  
+               NeuropeptideDummySide   MiyazawaJerniganInteraction    199±10ms  
+               NeuropeptideDummySide        RandomInteraction         210±10ms  
+               NeuropeptideDummySide         MixedInteraction         190±7ms   
+                    Angiotensin        MiyazawaJerniganInteraction    698±50ms  
+                    Angiotensin             RandomInteraction         673±30ms  
+                    Angiotensin              MixedInteraction         667±20ms  
+                AngiotensinDummySide   MiyazawaJerniganInteraction   1.31±0.04s 
+                AngiotensinDummySide        RandomInteraction        1.31±0.01s 
+                AngiotensinDummySide         MixedInteraction        1.31±0.02s 
+              ======================= ============================= ============
+
+[100.00%] ··· ...ldingProblemBenchmarks.time_generate_peptide                 ok
+[100.00%] ··· ======================= ============================= ==========
+                      peptide                interaction type                 
+              ----------------------- ----------------------------- ----------
+                    Neuropeptide       MiyazawaJerniganInteraction   36.0±3ms 
+                    Neuropeptide            RandomInteraction        38.2±2ms 
+                    Neuropeptide             MixedInteraction        32.6±2ms 
+               NeuropeptideDummySide   MiyazawaJerniganInteraction   50.9±1ms 
+               NeuropeptideDummySide        RandomInteraction        48.9±2ms 
+               NeuropeptideDummySide         MixedInteraction        52.5±2ms 
+                    Angiotensin        MiyazawaJerniganInteraction   69.1±1ms 
+                    Angiotensin             RandomInteraction        64.0±5ms 
+                    Angiotensin              MixedInteraction        63.0±6ms 
+                AngiotensinDummySide   MiyazawaJerniganInteraction   106±7ms  
+                AngiotensinDummySide        RandomInteraction        101±7ms  
+                AngiotensinDummySide         MixedInteraction        108±6ms  
+              ======================= ============================= ==========
+
+make[1]: Leaving directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/nature'

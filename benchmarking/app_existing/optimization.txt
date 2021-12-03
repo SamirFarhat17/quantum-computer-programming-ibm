@@ -1,0 +1,192 @@
+make -C optimization asv ASVCMD=run ASVOPTS=""
+make[1]: Entering directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/optimization'
+python -m asv run  || true
+· Fetching recent changes
+· Creating environments
+· Discovering benchmarks
+· Running 8 total benchmarks (1 commits * 1 environments * 8 benchmarks)
+[  0.00%] · For qiskit-optimization commit 91d0ad9d <main>:
+[  0.00%] ·· Benchmarking virtualenv-py3.8-cplex-cvxpy-gurobipy-matplotlib
+[  6.25%] ··· Running (knapsack.KnapsackBenchmarks.time_generate_qubo--).
+[ 12.50%] ··· Running (knapsack.KnapsackBenchmarks.time_grover--).
+[ 18.75%] ··· Running (knapsack.KnapsackBenchmarks.time_qaoa--).
+[ 25.00%] ··· Running (knapsack.KnapsackBenchmarks.time_vqe--)..
+[ 37.50%] ··· Running (maxcut.MaxcutBenchmarks.time_grover--).
+[ 43.75%] ··· Running (maxcut.MaxcutBenchmarks.time_qaoa--)..
+[ 56.25%] ··· knapsack.KnapsackBenchmarks.time_generate_qubo                  ok
+[ 56.25%] ··· ================= ============= ==========
+               number of items   max_weights            
+              ----------------- ------------- ----------
+                      2               2        23.9±1ms 
+                      2               4        24.8±1ms 
+                      2               8        25.3±1ms 
+                      2               16       26.7±2ms 
+                      3               2        25.4±2ms 
+                      3               4        25.5±1ms 
+                      3               8        28.4±2ms 
+                      3               16       27.1±2ms 
+                      4               2        27.6±3ms 
+                      4               4        26.2±3ms 
+                      4               8        31.9±2ms 
+                      4               16       29.0±2ms 
+                      5               2        29.1±8ms 
+                      5               4        28.2±2ms 
+                      5               8        28.7±2ms 
+                      5               16       29.8±2ms 
+              ================= ============= ==========
+
+[ 62.50%] ··· knapsack.KnapsackBenchmarks.time_grover                         ok
+[ 62.50%] ··· ================= ============= ===========
+               number of items   max_weights             
+              ----------------- ------------- -----------
+                      2               2        98.3±40ms 
+                      2               4        98.2±20ms 
+                      2               8         102±20ms 
+                      2               16        120±30ms 
+                      3               2         129±50ms 
+                      3               4         146±60ms 
+                      3               8         141±30ms 
+                      3               16        146±20ms 
+                      4               2         144±20ms 
+                      4               4         319±40ms 
+                      4               8         280±30ms 
+                      4               16        199±30ms 
+                      5               2         273±40ms 
+                      5               4         206±40ms 
+                      5               8         13.4±4s  
+                      5               16        2.97±1s  
+              ================= ============= ===========
+
+[ 68.75%] ··· knapsack.KnapsackBenchmarks.time_qaoa                           ok
+[ 68.75%] ··· ================= ============= ===========
+               number of items   max_weights             
+              ----------------- ------------- -----------
+                      2               2         135±4ms  
+                      2               4         178±10ms 
+                      2               8         223±20ms 
+                      2               16        273±40ms 
+                      3               2         187±20ms 
+                      3               4         240±8ms  
+                      3               8         307±4ms  
+                      3               16        393±40ms 
+                      4               2         266±20ms 
+                      4               4         320±10ms 
+                      4               8         400±10ms 
+                      4               16        505±20ms 
+                      5               2         316±10ms 
+                      5               4         394±9ms  
+                      5               8        798±300ms 
+                      5               16        631±40ms 
+              ================= ============= ===========
+
+[ 75.00%] ··· knapsack.KnapsackBenchmarks.time_vqe                            ok
+[ 75.00%] ··· ================= ============= ===========
+               number of items   max_weights             
+              ----------------- ------------- -----------
+                      2               2         137±2ms  
+                      2               4        158±0.9ms 
+                      2               8         190±2ms  
+                      2               16        229±8ms  
+                      3               2         161±5ms  
+                      3               4         197±4ms  
+                      3               8         233±4ms  
+                      3               16        266±3ms  
+                      4               2         194±2ms  
+                      4               4         228±2ms  
+                      4               8         264±3ms  
+                      4               16        308±10ms 
+                      5               2         235±7ms  
+                      5               4         265±3ms  
+                      5               8         304±6ms  
+                      5               16        351±4ms  
+              ================= ============= ===========
+
+[ 81.25%] ··· maxcut.MaxcutBenchmarks.time_generate_qubo                      ok
+[ 81.25%] ··· ================= ======== ============
+               number of nodes   degree              
+              ----------------- -------- ------------
+                      2            3         n/a     
+                      2            5         n/a     
+                      2            7         n/a     
+                      2            9         n/a     
+                      4            3      25.9±0.5ms 
+                      4            5         n/a     
+                      4            7         n/a     
+                      4            9         n/a     
+                      8            3      28.5±0.5ms 
+                      8            5      31.7±0.5ms 
+                      8            7      34.9±0.5ms 
+                      8            9         n/a     
+                      12           3       31.6±1ms  
+                      12           5      35.7±0.6ms 
+                      12           7       40.1±4ms  
+                      12           9      44.7±0.8ms 
+              ================= ======== ============
+
+[ 87.50%] ··· maxcut.MaxcutBenchmarks.time_grover                             ok
+[ 87.50%] ··· ================= ======== ============
+               number of nodes   degree              
+              ----------------- -------- ------------
+                      2            3         n/a     
+                      2            5         n/a     
+                      2            7         n/a     
+                      2            9         n/a     
+                      4            3      77.0±0.6ms 
+                      4            5         n/a     
+                      4            7         n/a     
+                      4            9         n/a     
+                      8            3       159±4ms   
+                      8            5       175±6ms   
+                      8            7       243±20ms  
+                      8            9         n/a     
+                      12           3      6.04±0.8s  
+                      12           5      8.90±0.6s  
+                      12           7      9.47±0.7s  
+                      12           9      10.7±0.4s  
+              ================= ======== ============
+
+[ 93.75%] ··· maxcut.MaxcutBenchmarks.time_qaoa                               ok
+[ 93.75%] ··· ================= ======== ==========
+               number of nodes   degree            
+              ----------------- -------- ----------
+                      2            3        n/a    
+                      2            5        n/a    
+                      2            7        n/a    
+                      2            9        n/a    
+                      4            3      126±2ms  
+                      4            5        n/a    
+                      4            7        n/a    
+                      4            9        n/a    
+                      8            3      252±4ms  
+                      8            5      358±40ms 
+                      8            7      375±20ms 
+                      8            9        n/a    
+                      12           3      404±30ms 
+                      12           5      548±20ms 
+                      12           7      680±30ms 
+                      12           9      757±40ms 
+              ================= ======== ==========
+
+[100.00%] ··· maxcut.MaxcutBenchmarks.time_vqe                                ok
+[100.00%] ··· ================= ======== ===========
+               number of nodes   degree             
+              ----------------- -------- -----------
+                      2            3         n/a    
+                      2            5         n/a    
+                      2            7         n/a    
+                      2            9         n/a    
+                      4            3       142±4ms  
+                      4            5         n/a    
+                      4            7         n/a    
+                      4            9         n/a    
+                      8            3       281±3ms  
+                      8            5       289±4ms  
+                      8            7       298±10ms 
+                      8            9         n/a    
+                      12           3       437±9ms  
+                      12           5       427±30ms 
+                      12           7      476±100ms 
+                      12           9       497±80ms 
+              ================= ======== ===========
+
+make[1]: Leaving directory '/home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/optimization-benchmarking/optimization'
