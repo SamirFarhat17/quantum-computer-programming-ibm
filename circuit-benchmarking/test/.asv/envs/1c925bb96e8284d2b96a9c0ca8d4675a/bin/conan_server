@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' /home/samir/Documents/Boston_University/Fall_2021/EC713/quantum-computer-programming-ibm/qiskit-aer/test/.asv/envs/1c925bb96e8284d2b96a9c0ca8d4675a/bin/python "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from conans.conan_server import run
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(run())

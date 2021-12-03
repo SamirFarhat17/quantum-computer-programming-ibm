@@ -1,15 +1,3 @@
-# This code is part of Qiskit.
-#
-# (C) Copyright IBM 2021.
-#
-# This code is licensed under the Apache License, Version 2.0. You may
-# obtain a copy of this license in the LICENSE.txt file in the root directory
-# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
-#
-# Any modifications or derivative works of this code must retain this
-# copyright notice, and modified files need to carry a notice indicating
-# that they have been altered from the originals.
-
 """maxcut benchmarks"""
 
 from itertools import product
@@ -25,9 +13,6 @@ from qiskit.utils import algorithm_globals, QuantumInstance
 from qiskit_optimization.algorithms import MinimumEigenOptimizer, GroverOptimizer
 from qiskit_optimization.applications import Maxcut
 from qiskit_optimization.converters import QuadraticProgramToQubo
-
-# pylint: disable=redefined-outer-name, invalid-name, attribute-defined-outside-init
-
 
 class MaxcutBenchmarks:
     """Maxcut benchmarks"""

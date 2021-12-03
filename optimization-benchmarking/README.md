@@ -45,9 +45,4 @@ If you use Qiskit, please cite as per the provided
 Please note that if you do not like the way your name is cited in the BibTex file then consult
 the information found in the [.mailmap](https://github.com/Qiskit/qiskit-app-benchmarks/blob/main/.mailmap)
 file.
-
-## License
-
-This project uses the [Apache License 2.0](LICENSE.txt).
-
                                                                           
