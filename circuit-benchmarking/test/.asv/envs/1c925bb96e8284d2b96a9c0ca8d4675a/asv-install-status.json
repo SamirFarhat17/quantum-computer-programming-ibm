@@ -8,6 +8,7 @@
             "python -mpip install -U scikit-build",
             "pip install git+https://github.com/Qiskit/qiskit-terra",
             "pip install git+https://github.com/Qiskit/qiskit-aqua",
+            "pip install git+https://github.com/Qiskit/qiskit-optimization",
             "pip install pyscf",
             "pip install matplotlib",
             "python setup.py bdist_wheel --dist-dir={build_cache_dir} -- -DCMAKE_CXX_COMPILER=g++ -- -j"
@@ -17,6 +18,7 @@
             "python -c \"import shutil; shutil.rmtree('{build_dir}/qiskit_aer.egg-info', True)\"",
             "pip install git+https://github.com/Qiskit/qiskit-terra",
             "pip install git+https://github.com/Qiskit/qiskit-aqua",
+            "pip install git+https://github.com/Qiskit/qiskit-optimization",
             "python -mpip install {wheel_file}"
         ],
         [

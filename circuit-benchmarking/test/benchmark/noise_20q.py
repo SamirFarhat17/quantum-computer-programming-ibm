@@ -52,14 +52,14 @@ class DampingError(NoiseSimulatorBenchmarkSuite):
         if apps is None:
             apps = DEFAULT_APPS
         super().__init__('damping_error',
-                         apps, 
-                         qubits=qubits, 
-                         runtime_names=runtime_names, 
-                         measures=measures, 
-                         measure_counts=measure_counts, 
+                         apps,
+                         qubits=qubits,
+                         runtime_names=runtime_names,
+                         measures=measures,
+                         measure_counts=measure_counts,
                          noise_model_names=noise_model_names)
         self.__name__ = 'damping_error'
-        
+
 class DepolarizingError(NoiseSimulatorBenchmarkSuite):
 
     def __init__(self,
@@ -84,11 +84,11 @@ class DepolarizingError(NoiseSimulatorBenchmarkSuite):
         self.__name__ = 'depolarizing_error'
 
         super().__init__('depolarizing_error',
-                         apps, 
-                         qubits=qubits, 
-                         runtime_names=runtime_names, 
-                         measures=measures, 
-                         measure_counts=measure_counts, 
+                         apps,
+                         qubits=qubits,
+                         runtime_names=runtime_names,
+                         measures=measures,
+                         measure_counts=measure_counts,
                          noise_model_names=noise_model_names)
 
 

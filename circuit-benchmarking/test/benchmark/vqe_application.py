@@ -10,7 +10,7 @@ from qiskit.chemistry.applications import MolecularGroundStateEnergy
 from qiskit.chemistry.components.initial_states import HartreeFock
 from qiskit.chemistry.components.variational_forms import UCCSD
 from qiskit.chemistry.drivers import PySCFDriver, UnitsType
-
+'''
 class UCCSDBenchmarkSuite:
 
     def __init__(self,
@@ -47,10 +47,9 @@ class UCCSDBenchmarkSuite:
         mgse = MolecularGroundStateEnergy(driver)
         result = mgse.compute_energy(cb_create_solver)
             
-    '''def time_statevector(self, mol_name):
+    def time_statevector(self, mol_name):
         threads = multiprocessing.cpu_count()
         mol_string = self.mol_strings[mol_name][0]
         qubit = self.mol_strings[mol_name][1]
-        self._run_uccsd_vqe(mol_string, 'statevector', threads)'''
-
-
+        self._run_uccsd_vqe(mol_string, 'statevector', threads)
+'''

@@ -3,12 +3,12 @@ from benchmark.simulator_benchmark import SimulatorBenchmarkSuite
 from benchmark.output import OutputSimulatorBenchmarkSuite
 
 DEFAULT_APPS = {
-#    'fourier_checking',
-#    'graph_state',
-#    'hidden_linear_function',
-#    'iqp',
+    'fourier_checking': 1,
+    'graph_state': 1,
+    'hidden_linear_function': 1,
+    'iqp': 1,
     'quantum_volume': 1,
-#    'phase_estimation'
+    'phase_estimation': 1,
     }
 
 DEFAULT_QUBITS = [ 25 ]

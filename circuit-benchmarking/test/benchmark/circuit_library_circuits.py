@@ -109,3 +109,43 @@ class CircuitLibraryCircuits():
     def log_normal_distribution(self, qubit, repeats):
         mu = 100
         return self._repeat(LogNormalDistribution(qubit, mu, sigma=12.5), repeats)
+
+    # Standard Gates
+    def barrier(self, qubit, repeats):
+        Barrier = self.transpile(RealAmplitudes(qubit, reps=repeats, entanglement='linear'))
+        return Barrier
+
+    def mc_phase(self, qubit, repeats):
+        MCPhaseGate = ExcitationPreserving
+        return self.transpile(MCPhaseGate(qubit, reps=repeats).decompose())
+
+    # Further adders
+    def draper_qft_adder(self, qubits, repeats):
+        return self._repeat(DraperQFTAdder(qubits), repeats)
+
+    def cdkm_ripple_carry_adder(self, qubits, repeats):
+        return self._repeat(CDKMRippleCarryAdder(qubits), repeats)
+
+    def vbe_ripple_carry_adder(self, qubits, repeats):
+        return self._repeat(VBERippleCarryAdder(qubits), repeats)
+
+    # Multipliers
+    def hrs_cum_mult(self, qubits, repeats):
+        return self._repeat(HRSCumulativeMultiplier(qubits), repeats)
+
+    def rgqft_mult(self, qubits, repeats):
+        return self._repeat(RGQFTMultiplier(qubits), repeats)
+
+    # Pauli Rotations
+    def linear_pauli_rotations(self, qubits, repeats):
+        return self._repeat(LinearPauliRotations(num_state_qubits=qubits), repeats)
+
+    def poly_pauli_rotations(self, qubits, repeats):
+        return self._repeat(PolynomialPauliRotations(num_state_qubits=qubits), repeats)
+
+    def piecewise_lin_pauli_rotations(self, qubits, repeats):
+        return self._repeat(PiecewiseLinearPauliRotations(num_state_qubits=qubits), repeats)
+
+    def piecewise_poly_pauli_rotations(self, qubits, repeats):
+        return self._repeat(PiecewisePolynomialPauliRotations(num_state_qubits=qubits), repeats)
+

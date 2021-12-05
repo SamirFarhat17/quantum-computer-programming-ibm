@@ -34,7 +34,12 @@ class ArithmeticCircuits(BasicSimulatorBenchmarkSuite):
             apps = {
                 'integer_comparator': 10,
                 'weighted_adder': 1,
-                'quadratic_form': 10
+                'quadratic_form': 10,
+                'draper_qft_adder': 10,
+                'cdkm_ripple_carry_adder':10,
+                'vbe_ripple_carry_adder': 10,
+                'hrs_cum_mult': 10,
+                'rgqft_mult': 10
             }
         if qubits is None:
             qubits = DEFAULT_QUBITS
@@ -177,8 +182,72 @@ class ProbabilityDistributionCircuits(BasicSimulatorBenchmarkSuite):
                 'log_normal_distribution': 10,
             }
 
-        super().__init__('particular_quantum_circuits',
+        super().__init__('probability_distribution_circuits',
                          apps, qubits=qubits,
+                         runtime_names=runtime_names,
+                         measures=measures,
+                         measure_counts=measure_counts,
+                         noise_model_names=noise_model_names)
+
+
+class StandardGates(BasicSimulatorBenchmarkSuite):
+    def __init__(self,
+                 apps=None,
+                 qubits=None,
+                 runtime_names=None,
+                 measures=None,
+                 measure_counts=DEFAULT_MEASUREMENT_COUNTS,
+                 noise_model_names=None):
+        if noise_model_names is None:
+            noise_model_names = DEFAULT_NOISE_MODELS
+        if runtime_names is None:
+            runtime_names = DEFAULT_RUNTIME
+        if measures is None:
+            measures = DEFAULT_MEASUREMENT_METHODS
+        if qubits is None:
+            qubits = DEFAULT_QUBITS
+        if apps is None:
+            apps = {
+                'barrier': 10,
+                'mc_phase': 10,
+            }
+
+        super().__init__('standard_gates',
+                         apps, qubits=qubits,
+                         runtime_names=runtime_names,
+                         measures=measures,
+                         measure_counts=measure_counts,
+                         noise_model_names=noise_model_names)
+
+
+class PauliRotationCircuits(BasicSimulatorBenchmarkSuite):
+
+    def __init__(self,
+                 apps=None,
+                 qubits=None,
+                 runtime_names=None,
+                 measures=None,
+                 measure_counts=DEFAULT_MEASUREMENT_COUNTS,
+                 noise_model_names=None):
+        if apps is None:
+            apps = {
+                'linear_pauli_rotations': 10,
+                'poly_pauli_rotations': 10,
+                'piecewise_lin_pauli_rotations': 10,
+                'piecewise_poly_pauli_rotations': 10,
+            }
+        if qubits is None:
+            qubits = DEFAULT_QUBITS
+        if noise_model_names is None:
+            noise_model_names = DEFAULT_NOISE_MODELS
+        if measures is None:
+            measures = DEFAULT_MEASUREMENT_METHODS
+        if runtime_names is None:
+            runtime_names = DEFAULT_RUNTIME
+
+        super().__init__('pauli_rotations',
+                         apps,
+                         qubits=qubits,
                          runtime_names=runtime_names,
                          measures=measures,
                          measure_counts=measure_counts,
@@ -187,6 +256,6 @@ class ProbabilityDistributionCircuits(BasicSimulatorBenchmarkSuite):
 
 if __name__ == "__main__":
     benchmarks = [ArithmeticCircuits(), BasicChangeCircuits(), NLocalCircuits(), ParticularQuantumCircuits(),
-                  ProbabilityDistributionCircuits()]
-    for benrhmark in benchmarks:
-        benrhmark.run_manual()
+                  ProbabilityDistributionCircuits(), StandardGates(), PauliRotationCircuits()]
+    for benchmark in benchmarks:
+        benchmark.run_manual()

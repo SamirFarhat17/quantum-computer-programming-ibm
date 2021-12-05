@@ -15,21 +15,6 @@
     // project being benchmarked
     "repo": "../",
 
-    // The Python project's subdirectory in your repo.  If missing or
-    // the empty string, the project is assumed to be located at the root
-    // of the repository.
-    // "repo_subdir": "",
-
-    // Customizable commands for building, installing, and
-    // uninstalling the project. See asv.conf.json documentation.
-    //
-    // "install_command": ["python -mpip install {wheel_file}"],
-    // "uninstall_command": ["return-code=any python -mpip uninstall -y {project}"],
-    // "build_command": [
-    //     "python setup.py build",
-    //     "PIP_NO_BUILD_ISOLATION=false python -mpip wheel --no-deps --no-index -w {build_cache_dir} {build_dir}"
-    // ],
-
     "install_command": [
         "python -c \"import shutil; shutil.rmtree('{build_dir}/qiskit', True)\"",
         "python -c \"import shutil; shutil.rmtree('{build_dir}/qiskit_aer.egg-info', True)\"",

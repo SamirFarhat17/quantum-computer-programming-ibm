@@ -1,0 +1,365 @@
+· Creating environments
+· Discovering benchmarks
+· Running 18 total benchmarks (1 commits * 1 environments * 18 benchmarks)
+[  0.00%] · For qiskit-aer commit 8ac51d88 <main>:
+[  0.00%] ·· Benchmarking conda-py3.9
+[  5.56%] ··· noise_12q.DampingError.track_density_matrix                 failed
+[  5.56%] ··· ======================== ================ ================ ========= ======= ========
+                    application         measure_method   measure_counts    noise    qubit          
+              ------------------------ ---------------- ---------------- --------- ------- --------
+                  fourier_checking         sampling           1000        damping     12    failed 
+                    graph_state            sampling           1000        damping     12    failed 
+               hidden_linear_function      sampling           1000        damping     12    failed 
+                        iqp                sampling           1000        damping     12    failed 
+                   quantum_volume          sampling           1000        damping     12    failed 
+                  phase_estimation         sampling           1000        damping     12    failed 
+              ======================== ================ ================ ========= ======= ========
+
+[ 11.11%] ··· noise_12q.DampingError.track_statevector                        ok
+[ 11.11%] ··· ======================== ================ ================ ========= ======= =====================
+                    application         measure_method   measure_counts    noise    qubit                       
+              ------------------------ ---------------- ---------------- --------- ------- ---------------------
+                  fourier_checking         sampling           1000        damping     12    0.06691479682922363 
+                    graph_state            sampling           1000        damping     12     0.0781409740447998 
+               hidden_linear_function      sampling           1000        damping     12    0.11370253562927246 
+                        iqp                sampling           1000        damping     12    0.11060070991516113 
+                   quantum_volume          sampling           1000        damping     12    0.06994128227233887 
+                  phase_estimation         sampling           1000        damping     12    0.04397225379943848 
+              ======================== ================ ================ ========= ======= =====================
+
+[ 16.67%] ··· ...e_12q.DepolarizingError.track_density_matrix             failed
+[ 16.67%] ··· ======================== ================ ================ ============== ======= ========
+                    application         measure_method   measure_counts      noise       qubit          
+              ------------------------ ---------------- ---------------- -------------- ------- --------
+                  fourier_checking         sampling           1000        depolarizing     12    failed 
+                    graph_state            sampling           1000        depolarizing     12    failed 
+               hidden_linear_function      sampling           1000        depolarizing     12    failed 
+                        iqp                sampling           1000        depolarizing     12    failed 
+                   quantum_volume          sampling           1000        depolarizing     12    failed 
+                  phase_estimation         sampling           1000        depolarizing     12    failed 
+              ======================== ================ ================ ============== ======= ========
+
+[ 22.22%] ··· noise_12q.DepolarizingError.track_statevector                   ok
+[ 22.22%] ··· ======================== ================ ================ ============== ======= =======================
+                    application         measure_method   measure_counts      noise       qubit                         
+              ------------------------ ---------------- ---------------- -------------- ------- -----------------------
+                  fourier_checking         sampling           1000        depolarizing     12    0.0049479007720947266 
+                    graph_state            sampling           1000        depolarizing     12     0.03360462188720703  
+               hidden_linear_function      sampling           1000        depolarizing     12     0.013658285140991211 
+                        iqp                sampling           1000        depolarizing     12     0.04667806625366211  
+                   quantum_volume          sampling           1000        depolarizing     12     0.04545736312866211  
+                  phase_estimation         sampling           1000        depolarizing     12    0.0036432743072509766 
+              ======================== ================ ================ ============== ======= =======================
+
+[ 27.78%] ··· noise_16q.DampingError.track_density_matrix                 failed
+[ 27.78%] ··· ======================== ================ ================ ========= ======= ========
+                    application         measure_method   measure_counts    noise    qubit          
+              ------------------------ ---------------- ---------------- --------- ------- --------
+                  fourier_checking         sampling           1000        damping     16    failed 
+                    graph_state            sampling           1000        damping     16    failed 
+               hidden_linear_function      sampling           1000        damping     16    failed 
+                        iqp                sampling           1000        damping     16    failed 
+                   quantum_volume          sampling           1000        damping     16    failed 
+                  phase_estimation         sampling           1000        damping     16    failed 
+              ======================== ================ ================ ========= ======= ========
+
+[ 33.33%] ··· noise_16q.DampingError.track_statevector                        ok
+[ 33.33%] ··· ======================== ================ ================ ========= ======= =====================
+                    application         measure_method   measure_counts    noise    qubit                       
+              ------------------------ ---------------- ---------------- --------- ------- ---------------------
+                  fourier_checking         sampling           1000        damping     16    0.07650160789489746 
+                    graph_state            sampling           1000        damping     16    0.07034420967102051 
+               hidden_linear_function      sampling           1000        damping     16    0.09919595718383789 
+                        iqp                sampling           1000        damping     16    0.07015442848205566 
+                   quantum_volume          sampling           1000        damping     16     0.0777597427368164 
+                  phase_estimation         sampling           1000        damping     16    0.07242250442504883 
+              ======================== ================ ================ ========= ======= =====================
+
+[ 38.89%] ··· ...e_16q.DepolarizingError.track_density_matrix             failed
+[ 38.89%] ··· ======================== ================ ================ ============== ======= ========
+                    application         measure_method   measure_counts      noise       qubit          
+              ------------------------ ---------------- ---------------- -------------- ------- --------
+                  fourier_checking         sampling           1000        depolarizing     16    failed 
+                    graph_state            sampling           1000        depolarizing     16    failed 
+               hidden_linear_function      sampling           1000        depolarizing     16    failed 
+                        iqp                sampling           1000        depolarizing     16    failed 
+                   quantum_volume          sampling           1000        depolarizing     16    failed 
+                  phase_estimation         sampling           1000        depolarizing     16    failed 
+              ======================== ================ ================ ============== ======= ========
+
+[ 44.44%] ··· noise_16q.DepolarizingError.track_statevector                   ok
+[ 44.44%] ··· ======================== ================ ================ ============== ======= ======================
+                    application         measure_method   measure_counts      noise       qubit                        
+              ------------------------ ---------------- ---------------- -------------- ------- ----------------------
+                  fourier_checking         sampling           1000        depolarizing     16    0.012305974960327148 
+                    graph_state            sampling           1000        depolarizing     16    0.004823446273803711 
+               hidden_linear_function      sampling           1000        depolarizing     16    0.008385658264160156 
+                        iqp                sampling           1000        depolarizing     16    0.005445241928100586 
+                   quantum_volume          sampling           1000        depolarizing     16    0.004842519760131836 
+                  phase_estimation         sampling           1000        depolarizing     16    0.03441309928894043  
+              ======================== ================ ================ ============== ======= ======================
+
+[ 50.00%] ··· noise_20q.DampingError.track_density_matrix                 failed
+[ 50.00%] ··· ======================== ================ ================ ========= ======= ========
+                    application         measure_method   measure_counts    noise    qubit          
+              ------------------------ ---------------- ---------------- --------- ------- --------
+                  fourier_checking         sampling           1000        damping     20    failed 
+                    graph_state            sampling           1000        damping     20    failed 
+               hidden_linear_function      sampling           1000        damping     20    failed 
+                        iqp                sampling           1000        damping     20    failed 
+                   quantum_volume          sampling           1000        damping     20    failed 
+                  phase_estimation         sampling           1000        damping     20    failed 
+              ======================== ================ ================ ========= ======= ========
+
+[ 55.56%] ··· noise_20q.DampingError.track_statevector                        ok
+[ 55.56%] ··· ======================== ================ ================ ========= ======= ======================
+                    application         measure_method   measure_counts    noise    qubit                        
+              ------------------------ ---------------- ---------------- --------- ------- ----------------------
+                  fourier_checking         sampling           1000        damping     20    0.13440704345703125  
+                    graph_state            sampling           1000        damping     20    0.020911693572998047 
+               hidden_linear_function      sampling           1000        damping     20    0.07931971549987793  
+                        iqp                sampling           1000        damping     20    0.06453418731689453  
+                   quantum_volume          sampling           1000        damping     20    0.05704212188720703  
+                  phase_estimation         sampling           1000        damping     20     0.0624995231628418  
+              ======================== ================ ================ ========= ======= ======================
+
+[ 61.11%] ··· ...e_20q.DepolarizingError.track_density_matrix             failed
+[ 61.11%] ··· ======================== ================ ================ ============== ======= ========
+                    application         measure_method   measure_counts      noise       qubit          
+              ------------------------ ---------------- ---------------- -------------- ------- --------
+                  fourier_checking         sampling           1000        depolarizing     20    failed 
+                    graph_state            sampling           1000        depolarizing     20    failed 
+               hidden_linear_function      sampling           1000        depolarizing     20    failed 
+                        iqp                sampling           1000        depolarizing     20    failed 
+                   quantum_volume          sampling           1000        depolarizing     20    failed 
+                  phase_estimation         sampling           1000        depolarizing     20    failed 
+              ======================== ================ ================ ============== ======= ========
+
+[ 66.67%] ··· noise_20q.DepolarizingError.track_statevector                   ok
+[ 66.67%] ··· ======================== ================ ================ ============== ======= =======================
+                    application         measure_method   measure_counts      noise       qubit                         
+              ------------------------ ---------------- ---------------- -------------- ------- -----------------------
+                  fourier_checking         sampling           1000        depolarizing     20      0.4613919258117676  
+                    graph_state            sampling           1000        depolarizing     20     0.034903764724731445 
+               hidden_linear_function      sampling           1000        depolarizing     20     0.05617809295654297  
+                        iqp                sampling           1000        depolarizing     20     0.03219127655029297  
+                   quantum_volume          sampling           1000        depolarizing     20    0.0058803558349609375 
+                  phase_estimation         sampling           1000        depolarizing     20     0.04758572578430176  
+              ======================== ================ ================ ============== ======= =======================
+
+[ 72.22%] ··· output_05q.ExpVal.track_statevector                             ok
+[ 72.22%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking          expval             1          ideal     5     0.0018162727355957031 
+                  fourier_checking          expval             10         ideal     5     0.0021026134490966797 
+                  fourier_checking          expval            100         ideal     5     0.0016143321990966797 
+                  fourier_checking          expval            1000        ideal     5      0.003992557525634766 
+                  fourier_checking          expval           10000        ideal     5      0.004060268402099609 
+                    graph_state             expval             1          ideal     5     0.0038738250732421875 
+                    graph_state             expval             10         ideal     5      0.00460362434387207  
+                    graph_state             expval            100         ideal     5     0.0018851757049560547 
+                    graph_state             expval            1000        ideal     5     0.0016927719116210938 
+                    graph_state             expval           10000        ideal     5     0.0016219615936279297 
+               hidden_linear_function       expval             1          ideal     5     0.0015530586242675781 
+               hidden_linear_function       expval             10         ideal     5     0.0015337467193603516 
+               hidden_linear_function       expval            100         ideal     5       0.001678466796875   
+               hidden_linear_function       expval            1000        ideal     5     0.0015096664428710938 
+               hidden_linear_function       expval           10000        ideal     5      0.001522064208984375 
+                        iqp                 expval             1          ideal     5      0.004804372787475586 
+                        iqp                 expval             10         ideal     5      0.001422882080078125 
+                        iqp                 expval            100         ideal     5     0.0022580623626708984 
+                        iqp                 expval            1000        ideal     5      0.001926422119140625 
+                        iqp                 expval           10000        ideal     5      0.002519845962524414 
+                   quantum_volume           expval             1          ideal     5     0.0020999908447265625 
+                   quantum_volume           expval             10         ideal     5     0.0015861988067626953 
+                   quantum_volume           expval            100         ideal     5     0.0019953250885009766 
+                   quantum_volume           expval            1000        ideal     5     0.0016472339630126953 
+                   quantum_volume           expval           10000        ideal     5     0.0026428699493408203 
+                  phase_estimation          expval             1          ideal     5      0.002301454544067383 
+                  phase_estimation          expval             10         ideal     5      0.001087188720703125 
+                  phase_estimation          expval            100         ideal     5      0.001291036605834961 
+                  phase_estimation          expval            1000        ideal     5     0.0012218952178955078 
+                  phase_estimation          expval           10000        ideal     5      0.001079559326171875 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 77.78%] ··· output_05q.Sampling.track_statevector                           ok
+[ 77.78%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling            1          ideal     5      0.001878976821899414 
+                  fourier_checking         sampling            10         ideal     5      0.004209756851196289 
+                  fourier_checking         sampling           100         ideal     5      0.005083560943603516 
+                  fourier_checking         sampling           1000        ideal     5     0.0031838417053222656 
+                  fourier_checking         sampling          10000        ideal     5     0.0025887489318847656 
+                    graph_state            sampling            1          ideal     5     0.0019106864929199219 
+                    graph_state            sampling            10         ideal     5     0.0014934539794921875 
+                    graph_state            sampling           100         ideal     5     0.0046079158782958984 
+                    graph_state            sampling           1000        ideal     5      0.005453348159790039 
+                    graph_state            sampling          10000        ideal     5      0.006094932556152344 
+               hidden_linear_function      sampling            1          ideal     5     0.0014729499816894531 
+               hidden_linear_function      sampling            10         ideal     5      0.001422882080078125 
+               hidden_linear_function      sampling           100         ideal     5     0.0016736984252929688 
+               hidden_linear_function      sampling           1000        ideal     5     0.0016140937805175781 
+               hidden_linear_function      sampling          10000        ideal     5     0.0015594959259033203 
+                        iqp                sampling            1          ideal     5     0.0014948844909667969 
+                        iqp                sampling            10         ideal     5     0.0015745162963867188 
+                        iqp                sampling           100         ideal     5      0.001455545425415039 
+                        iqp                sampling           1000        ideal     5      0.002404928207397461 
+                        iqp                sampling          10000        ideal     5     0.0017559528350830078 
+                   quantum_volume          sampling            1          ideal     5      0.001603841781616211 
+                   quantum_volume          sampling            10         ideal     5      0.001695871353149414 
+                   quantum_volume          sampling           100         ideal     5     0.0016360282897949219 
+                   quantum_volume          sampling           1000        ideal     5     0.0020017623901367188 
+                   quantum_volume          sampling          10000        ideal     5     0.0016560554504394531 
+                  phase_estimation         sampling            1          ideal     5     0.0011522769927978516 
+                  phase_estimation         sampling            10         ideal     5     0.0023801326751708984 
+                  phase_estimation         sampling           100         ideal     5      0.006043195724487305 
+                  phase_estimation         sampling           1000        ideal     5     0.0014214515686035156 
+                  phase_estimation         sampling          10000        ideal     5     0.0018241405487060547 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 83.33%] ··· output_15q.ExpVal.track_statevector                             ok
+[ 83.33%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking          expval             1          ideal     15     0.00203704833984375  
+                  fourier_checking          expval             10         ideal     15      0.0019683837890625  
+                  fourier_checking          expval            100         ideal     15     0.002301454544067383 
+                  fourier_checking          expval            1000        ideal     15    0.0022215843200683594 
+                  fourier_checking          expval           10000        ideal     15    0.0019507408142089844 
+                    graph_state             expval             1          ideal     15     0.002833843231201172 
+                    graph_state             expval             10         ideal     15    0.0022706985473632812 
+                    graph_state             expval            100         ideal     15     0.003286600112915039 
+                    graph_state             expval            1000        ideal     15     0.003603219985961914 
+                    graph_state             expval           10000        ideal     15     0.004112958908081055 
+               hidden_linear_function       expval             1          ideal     15    0.0029594898223876953 
+               hidden_linear_function       expval             10         ideal     15     0.002660989761352539 
+               hidden_linear_function       expval            100         ideal     15    0.0036334991455078125 
+               hidden_linear_function       expval            1000        ideal     15     0.002547025680541992 
+               hidden_linear_function       expval           10000        ideal     15    0.0017974376678466797 
+                        iqp                 expval             1          ideal     15    0.0020918846130371094 
+                        iqp                 expval             10         ideal     15    0.0020275115966796875 
+                        iqp                 expval            100         ideal     15    0.0018379688262939453 
+                        iqp                 expval            1000        ideal     15    0.0018649101257324219 
+                        iqp                 expval           10000        ideal     15    0.0018908977508544922 
+                   quantum_volume           expval             1          ideal     15     0.002846956253051758 
+                   quantum_volume           expval             10         ideal     15    0.0017528533935546875 
+                   quantum_volume           expval            100         ideal     15     0.001783609390258789 
+                   quantum_volume           expval            1000        ideal     15    0.0018837451934814453 
+                   quantum_volume           expval           10000        ideal     15    0.0018374919891357422 
+                  phase_estimation          expval             1          ideal     15    0.0013055801391601562 
+                  phase_estimation          expval             10         ideal     15     0.001470327377319336 
+                  phase_estimation          expval            100         ideal     15    0.0011479854583740234 
+                  phase_estimation          expval            1000        ideal     15     0.001055002212524414 
+                  phase_estimation          expval           10000        ideal     15    0.0009400844573974609 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 88.89%] ··· output_15q.Sampling.track_statevector                           ok
+[ 88.89%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling            1          ideal     15    0.0017783641815185547 
+                  fourier_checking         sampling            10         ideal     15    0.0022499561309814453 
+                  fourier_checking         sampling           100         ideal     15    0.0025682449340820312 
+                  fourier_checking         sampling           1000        ideal     15     0.00254058837890625  
+                  fourier_checking         sampling          10000        ideal     15    0.0025937557220458984 
+                    graph_state            sampling            1          ideal     15    0.0021932125091552734 
+                    graph_state            sampling            10         ideal     15     0.002872467041015625 
+                    graph_state            sampling           100         ideal     15    0.0019016265869140625 
+                    graph_state            sampling           1000        ideal     15     0.004525899887084961 
+                    graph_state            sampling          10000        ideal     15    0.0033071041107177734 
+               hidden_linear_function      sampling            1          ideal     15    0.0015392303466796875 
+               hidden_linear_function      sampling            10         ideal     15    0.0022068023681640625 
+               hidden_linear_function      sampling           100         ideal     15    0.0016493797302246094 
+               hidden_linear_function      sampling           1000        ideal     15    0.0019440650939941406 
+               hidden_linear_function      sampling          10000        ideal     15    0.0018799304962158203 
+                        iqp                sampling            1          ideal     15     0.002095460891723633 
+                        iqp                sampling            10         ideal     15    0.0017893314361572266 
+                        iqp                sampling           100         ideal     15     0.002112150192260742 
+                        iqp                sampling           1000        ideal     15    0.0018916130065917969 
+                        iqp                sampling          10000        ideal     15    0.0019390583038330078 
+                   quantum_volume          sampling            1          ideal     15    0.0017235279083251953 
+                   quantum_volume          sampling            10         ideal     15    0.0016770362854003906 
+                   quantum_volume          sampling           100         ideal     15    0.0017702579498291016 
+                   quantum_volume          sampling           1000        ideal     15     0.001714468002319336 
+                   quantum_volume          sampling          10000        ideal     15    0.0017299652099609375 
+                  phase_estimation         sampling            1          ideal     15    0.0009758472442626953 
+                  phase_estimation         sampling            10         ideal     15    0.0009627342224121094 
+                  phase_estimation         sampling           100         ideal     15     0.00113677978515625  
+                  phase_estimation         sampling           1000        ideal     15     0.00092315673828125  
+                  phase_estimation         sampling          10000        ideal     15    0.0009372234344482422 
+              ======================== ================ ================ ======= ======= =======================
+
+[ 94.44%] ··· output_25q.ExpVal.track_statevector                    5/30 failed
+[ 94.44%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking          expval             1          ideal     25            failed        
+                  fourier_checking          expval             10         ideal     25            failed        
+                  fourier_checking          expval            100         ideal     25            failed        
+                  fourier_checking          expval            1000        ideal     25            failed        
+                  fourier_checking          expval           10000        ideal     25            failed        
+                    graph_state             expval             1          ideal     25     0.003325939178466797 
+                    graph_state             expval             10         ideal     25     0.003600597381591797 
+                    graph_state             expval            100         ideal     25    0.0027239322662353516 
+                    graph_state             expval            1000        ideal     25    0.0025725364685058594 
+                    graph_state             expval           10000        ideal     25    0.0036368370056152344 
+               hidden_linear_function       expval             1          ideal     25     0.003077983856201172 
+               hidden_linear_function       expval             10         ideal     25     0.002274036407470703 
+               hidden_linear_function       expval            100         ideal     25    0.0031790733337402344 
+               hidden_linear_function       expval            1000        ideal     25     0.001493215560913086 
+               hidden_linear_function       expval           10000        ideal     25     0.001390695571899414 
+                        iqp                 expval             1          ideal     25    0.0024077892303466797 
+                        iqp                 expval             10         ideal     25    0.0024878978729248047 
+                        iqp                 expval            100         ideal     25     0.005565643310546875 
+                        iqp                 expval            1000        ideal     25    0.0023360252380371094 
+                        iqp                 expval           10000        ideal     25    0.0025908946990966797 
+                   quantum_volume           expval             1          ideal     25     0.002423524856567383 
+                   quantum_volume           expval             10         ideal     25     0.005434751510620117 
+                   quantum_volume           expval            100         ideal     25    0.0025801658630371094 
+                   quantum_volume           expval            1000        ideal     25    0.0030622482299804688 
+                   quantum_volume           expval           10000        ideal     25    0.0024423599243164062 
+                  phase_estimation          expval             1          ideal     25    0.0013644695281982422 
+                  phase_estimation          expval             10         ideal     25      0.001373291015625   
+                  phase_estimation          expval            100         ideal     25    0.0013606548309326172 
+                  phase_estimation          expval            1000        ideal     25    0.0013747215270996094 
+                  phase_estimation          expval           10000        ideal     25    0.0013048648834228516 
+              ======================== ================ ================ ======= ======= =======================
+
+[100.00%] ··· output_25q.Sampling.track_statevector                  5/30 failed
+[100.00%] ··· ======================== ================ ================ ======= ======= =======================
+                    application         measure_method   measure_counts   noise   qubit                         
+              ------------------------ ---------------- ---------------- ------- ------- -----------------------
+                  fourier_checking         sampling            1          ideal     25            failed        
+                  fourier_checking         sampling            10         ideal     25            failed        
+                  fourier_checking         sampling           100         ideal     25            failed        
+                  fourier_checking         sampling           1000        ideal     25            failed        
+                  fourier_checking         sampling          10000        ideal     25            failed        
+                    graph_state            sampling            1          ideal     25    0.0018570423126220703 
+                    graph_state            sampling            10         ideal     25    0.0015628337860107422 
+                    graph_state            sampling           100         ideal     25    0.0015783309936523438 
+                    graph_state            sampling           1000        ideal     25     0.002325296401977539 
+                    graph_state            sampling          10000        ideal     25     0.002084016799926758 
+               hidden_linear_function      sampling            1          ideal     25    0.0018360614776611328 
+               hidden_linear_function      sampling            10         ideal     25    0.0018298625946044922 
+               hidden_linear_function      sampling           100         ideal     25    0.0015034675598144531 
+               hidden_linear_function      sampling           1000        ideal     25    0.0016646385192871094 
+               hidden_linear_function      sampling          10000        ideal     25     0.001451253890991211 
+                        iqp                sampling            1          ideal     25    0.0027658939361572266 
+                        iqp                sampling            10         ideal     25    0.0042514801025390625 
+                        iqp                sampling           100         ideal     25    0.0023436546325683594 
+                        iqp                sampling           1000        ideal     25     0.002297639846801758 
+                        iqp                sampling          10000        ideal     25     0.002521514892578125 
+                   quantum_volume          sampling            1          ideal     25     0.002343893051147461 
+                   quantum_volume          sampling            10         ideal     25    0.0022742748260498047 
+                   quantum_volume          sampling           100         ideal     25     0.002534151077270508 
+                   quantum_volume          sampling           1000        ideal     25    0.0023369789123535156 
+                   quantum_volume          sampling          10000        ideal     25     0.002472400665283203 
+                  phase_estimation         sampling            1          ideal     25    0.0014889240264892578 
+                  phase_estimation         sampling            10         ideal     25     0.001374959945678711 
+                  phase_estimation         sampling           100         ideal     25    0.0013833045959472656 
+                  phase_estimation         sampling           1000        ideal     25     0.001890420913696289 
+                  phase_estimation         sampling          10000        ideal     25    0.0016493797302246094 
+              ======================== ================ ================ ======= ======= =======================
+
