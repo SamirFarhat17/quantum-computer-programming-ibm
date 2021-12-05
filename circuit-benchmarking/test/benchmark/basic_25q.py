@@ -182,7 +182,37 @@ class ProbabilityDistributionCircuits(BasicSimulatorBenchmarkSuite):
                 'log_normal_distribution': 10,
             }
 
-        super().__init__('particular_quantum_circuits',
+        super().__init__('probability_distribution_circuits',
+                         apps, qubits=qubits,
+                         runtime_names=runtime_names,
+                         measures=measures,
+                         measure_counts=measure_counts,
+                         noise_model_names=noise_model_names)
+
+
+class StandardGates(BasicSimulatorBenchmarkSuite):
+    def __init__(self,
+                 apps=None,
+                 qubits=None,
+                 runtime_names=None,
+                 measures=None,
+                 measure_counts=DEFAULT_MEASUREMENT_COUNTS,
+                 noise_model_names=None):
+        if noise_model_names is None:
+            noise_model_names = DEFAULT_NOISE_MODELS
+        if runtime_names is None:
+            runtime_names = DEFAULT_RUNTIME
+        if measures is None:
+            measures = DEFAULT_MEASUREMENT_METHODS
+        if qubits is None:
+            qubits = DEFAULT_QUBITS
+        if apps is None:
+            apps = {
+                'barrier': 10,
+                'mc_phase': 10,
+            }
+
+        super().__init__('standard_gates',
                          apps, qubits=qubits,
                          runtime_names=runtime_names,
                          measures=measures,
@@ -224,8 +254,46 @@ class PauliRotationCircuits(BasicSimulatorBenchmarkSuite):
                          noise_model_names=noise_model_names)
 
 
+class GeneralizedGates(BasicSimulatorBenchmarkSuite):
+
+    def __init__(self,
+                 apps=None,
+                 qubits=None,
+                 runtime_names=None,
+                 measures=None,
+                 measure_counts=DEFAULT_MEASUREMENT_COUNTS,
+                 noise_model_names=None):
+        if apps is None:
+            apps = {
+                'mcmt': 10,
+                'mcmtv_chain': 10,
+                'permutation': 10,
+                'gms': 10,
+                'gr': 10,
+                'grx': 10,
+                'gry': 10,
+                'grz': 10
+            }
+        if qubits is None:
+            qubits = DEFAULT_QUBITS
+        if noise_model_names is None:
+            noise_model_names = DEFAULT_NOISE_MODELS
+        if measures is None:
+            measures = DEFAULT_MEASUREMENT_METHODS
+        if runtime_names is None:
+            runtime_names = DEFAULT_RUNTIME
+
+        super().__init__('generalized_gates',
+                         apps,
+                         qubits=qubits,
+                         runtime_names=runtime_names,
+                         measures=measures,
+                         measure_counts=measure_counts,
+                         noise_model_names=noise_model_names)
+
+
 if __name__ == "__main__":
     benchmarks = [ArithmeticCircuits(), BasicChangeCircuits(), NLocalCircuits(), ParticularQuantumCircuits(),
-                  ProbabilityDistributionCircuits(), PauliRotationCircuits()]
+                  ProbabilityDistributionCircuits(), StandardGates(), PauliRotationCircuits(), GeneralizedGates()]
     for benchmark in benchmarks:
         benchmark.run_manual()

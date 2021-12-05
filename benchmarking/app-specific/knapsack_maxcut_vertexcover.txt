@@ -1,0 +1,229 @@
+· Creating environments
+· Discovering benchmarks
+· Running 10 total benchmarks (1 commits * 1 environments * 10 benchmarks)
+[  0.00%] · For qiskit-aer commit 8ac51d88 <main>:
+[  0.00%] ·· Benchmarking conda-py3.9
+[  5.00%] ··· Running (knapsack_application.KnapsackBenchmarks.time_generate_qubo--)...
+[ 20.00%] ··· Running (knapsack_application.KnapsackBenchmarks.time_vqe--)...
+[ 35.00%] ··· Running (max_cut.MaxcutBenchmarks.time_qaoa--)..
+[ 45.00%] ··· Running (vertex_cover.VertexCoverBenchmarks.time_generate_qubo--)..
+[ 55.00%] ··· ...cation.KnapsackBenchmarks.time_generate_qubo                 ok
+[ 55.00%] ··· ================= ============= =============
+               number of items   max_weights               
+              ----------------- ------------- -------------
+                      2               2         8.42±0.1ms 
+                      2               4        8.86±0.06ms 
+                      2               8         9.45±0.2ms 
+                      2               16        10.5±0.2ms 
+                      3               2         9.52±0.6ms 
+                      3               4         10.4±0.8ms 
+                      3               8          11.4±1ms  
+                      3               16         13.1±4ms  
+                      4               2          13.3±2ms  
+                      4               4          14.0±2ms  
+                      4               8          13.3±2ms  
+                      4               16        12.4±0.3ms 
+                      5               2         10.6±0.3ms 
+                      5               4         11.5±0.6ms 
+                      5               8         11.9±0.6ms 
+                      5               16        13.2±0.3ms 
+              ================= ============= =============
+
+[ 60.00%] ··· ...k_application.KnapsackBenchmarks.time_grover                 ok
+[ 60.00%] ··· ================= ============= ============
+               number of items   max_weights              
+              ----------------- ------------- ------------
+                      2               2         72.6±7ms  
+                      2               4        89.3±20ms  
+                      2               8         92.1±3ms  
+                      2               16        98.9±2ms  
+                      3               2        96.6±0.7ms 
+                      3               4         106±1ms   
+                      3               8         109±4ms   
+                      3               16        125±7ms   
+                      4               2         117±4ms   
+                      4               4         255±10ms  
+                      4               8         214±10ms  
+                      4               16        166±6ms   
+                      5               2         227±10ms  
+                      5               4         173±9ms   
+                      5               8         434±50ms  
+                      5               16        274±20ms  
+              ================= ============= ============
+
+[ 65.00%] ··· ...ack_application.KnapsackBenchmarks.time_qaoa                 ok
+[ 65.00%] ··· ================= ============= ==========
+               number of items   max_weights            
+              ----------------- ------------- ----------
+                      2               2        92.4±5ms 
+                      2               4        123±4ms  
+                      2               8        163±8ms  
+                      2               16       209±8ms  
+                      3               2        131±10ms 
+                      3               4        175±2ms  
+                      3               8        226±10ms 
+                      3               16       297±5ms  
+                      4               2        176±30ms 
+                      4               4        230±60ms 
+                      4               8        318±30ms 
+                      4               16       383±20ms 
+                      5               2        227±3ms  
+                      5               4        299±20ms 
+                      5               8        379±20ms 
+                      5               16       498±20ms 
+              ================= ============= ==========
+
+[ 70.00%] ··· ...sack_application.KnapsackBenchmarks.time_vqe                 ok
+[ 70.00%] ··· ================= ============= ===========
+               number of items   max_weights             
+              ----------------- ------------- -----------
+                      2               2         95.4±7ms 
+                      2               4         116±10ms 
+                      2               8         168±20ms 
+                      2               16        196±40ms 
+                      3               2         136±30ms 
+                      3               4         145±8ms  
+                      3               8         165±7ms  
+                      3               16        209±30ms 
+                      4               2         144±30ms 
+                      4               4         165±10ms 
+                      4               8         211±30ms 
+                      4               16        232±10ms 
+                      5               2        160±0.9ms 
+                      5               4         189±8ms  
+                      5               8         239±5ms  
+                      5               16        252±2ms  
+              ================= ============= ===========
+
+[ 75.00%] ··· max_cut.MaxcutBenchmarks.time_generate_qubo                     ok
+[ 75.00%] ··· ================= ======== =============
+               number of nodes   degree               
+              ----------------- -------- -------------
+                      2            3          n/a     
+                      2            5          n/a     
+                      2            7          n/a     
+                      2            9          n/a     
+                      4            3        8.99±4ms  
+                      4            5          n/a     
+                      4            7          n/a     
+                      4            9          n/a     
+                      8            3       10.2±0.7ms 
+                      8            5      11.4±0.08ms 
+                      8            7       13.7±0.1ms 
+                      8            9          n/a     
+                      12           3       11.5±0.7ms 
+                      12           5       14.2±0.1ms 
+                      12           7        20.0±4ms  
+                      12           9        23.2±4ms  
+              ================= ======== =============
+
+[ 80.00%] ··· max_cut.MaxcutBenchmarks.time_grover                            ok
+[ 80.00%] ··· ================= ======== ===========
+               number of nodes   degree             
+              ----------------- -------- -----------
+                      2            3         n/a    
+                      2            5         n/a    
+                      2            7         n/a    
+                      2            9         n/a    
+                      4            3       57.1±4ms 
+                      4            5         n/a    
+                      4            7         n/a    
+                      4            9         n/a    
+                      8            3       130±10ms 
+                      8            5       137±9ms  
+                      8            7       209±9ms  
+                      8            9         n/a    
+                      12           3       852±30ms 
+                      12           5      1.21±0.1s 
+                      12           7      1.16±0.6s 
+                      12           9      1.10±0.1s 
+              ================= ======== ===========
+
+[ 85.00%] ··· max_cut.MaxcutBenchmarks.time_qaoa                              ok
+[ 85.00%] ··· ================= ======== ============
+               number of nodes   degree              
+              ----------------- -------- ------------
+                      2            3         n/a     
+                      2            5         n/a     
+                      2            7         n/a     
+                      2            9         n/a     
+                      4            3      76.7±0.3ms 
+                      4            5         n/a     
+                      4            7         n/a     
+                      4            9         n/a     
+                      8            3       159±10ms  
+                      8            5       199±2ms   
+                      8            7       240±2ms   
+                      8            9         n/a     
+                      12           3       271±3ms   
+                      12           5       348±2ms   
+                      12           7       425±4ms   
+                      12           9       539±40ms  
+              ================= ======== ============
+
+[ 90.00%] ··· max_cut.MaxcutBenchmarks.time_vqe                               ok
+[ 90.00%] ··· ================= ======== ==========
+               number of nodes   degree            
+              ----------------- -------- ----------
+                      2            3        n/a    
+                      2            5        n/a    
+                      2            7        n/a    
+                      2            9        n/a    
+                      4            3      101±30ms 
+                      4            5        n/a    
+                      4            7        n/a    
+                      4            9        n/a    
+                      8            3      186±20ms 
+                      8            5      188±7ms  
+                      8            7      195±10ms 
+                      8            9        n/a    
+                      12           3      293±2ms  
+                      12           5      311±20ms 
+                      12           7      375±10ms 
+                      12           9      380±40ms 
+              ================= ======== ==========
+
+[ 95.00%] ··· ...ver.VertexCoverBenchmarks.time_generate_qubo                 ok
+[ 95.00%] ··· ================= ======== ============
+               number of nodes   degree              
+              ----------------- -------- ------------
+                      2            3         n/a     
+                      2            5         n/a     
+                      2            7         n/a     
+                      2            9         n/a     
+                      4            3       6.99±3ms  
+                      4            5         n/a     
+                      4            7         n/a     
+                      4            9         n/a     
+                      8            3      8.87±0.3ms 
+                      8            5       13.8±6ms  
+                      8            7       18.6±3ms  
+                      8            9         n/a     
+                      12           3      12.2±0.5ms 
+                      12           5      16.1±0.8ms 
+                      12           7       18.0±1ms  
+                      12           9      21.4±0.9ms 
+              ================= ======== ============
+
+[100.00%] ··· vertex_cover.VertexCoverBenchmarks.time_qaoa                    ok
+[100.00%] ··· ================= ======== ==========
+               number of nodes   degree            
+              ----------------- -------- ----------
+                      2            3        n/a    
+                      2            5        n/a    
+                      2            7        n/a    
+                      2            9        n/a    
+                      4            3      99.2±3ms 
+                      4            5        n/a    
+                      4            7        n/a    
+                      4            9        n/a    
+                      8            3      287±40ms 
+                      8            5      304±20ms 
+                      8            7      319±20ms 
+                      8            9        n/a    
+                      12           3      394±9ms  
+                      12           5      477±20ms 
+                      12           7      571±5ms  
+                      12           9      656±7ms  
+              ================= ======== ==========
+

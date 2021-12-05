@@ -1,22 +1,16 @@
-'''import random
-
+'''
+import random
 from qiskit import Aer
 from qiskit.algorithms import QAOA, VQE
 from qiskit.algorithms.optimizers import COBYLA
 from qiskit.circuit.library import EfficientSU2
 from qiskit.utils import algorithm_globals, QuantumInstance
-
 from qiskit_optimization.algorithms import MinimumEigenOptimizer, GroverOptimizer
 from qiskit_optimization.applications import Knapsack
 from qiskit_optimization.converters import QuadraticProgramToQubo
 
-# pylint: disable=redefined-outer-name, invalid-name, attribute-defined-outside-init
-
 
 class KnapsackBenchmarks:
-    """Knapsack benchmarks"""
-
-    version = 1
     params = ([2, 3, 4, 5], [2, 4, 8, 16])
     param_names = ["number of items", "max_weights"]
 
@@ -42,31 +36,28 @@ class KnapsackBenchmarks:
         return qubo
 
     def time_generate_qubo(self, _, __):
-        """generate time qubo"""
         self._generate_qubo(self._knapsack)
 
     def time_qaoa(self, _, __):
-        """time qaoa"""
         meo = MinimumEigenOptimizer(
             min_eigen_solver=QAOA(optimizer=COBYLA(maxiter=1), quantum_instance=self._qins)
         )
         meo.solve(self._qp)
 
     def time_vqe(self, _, __):
-        """time vqe"""
         meo = MinimumEigenOptimizer(
             min_eigen_solver=VQE(
-                optimizer=COBYLA(maxiter=1), ansatz=EfficientSU2(), quantum_instance=self._qins
+                optimizer=COBYLA(maxiter=1), ansatz=EfficientSU2(),
+                quantum_instance=self._qins
             )
         )
         meo.solve(self._qp)
 
     def time_grover(self, _, __):
-        """time grover"""
         meo = GroverOptimizer(
             num_value_qubits=self._qp.get_num_vars(),
             num_iterations=1,
             quantum_instance=self._qins,
         )
         meo.solve(self._qp)
- '''
+'''

@@ -1,5 +1,7 @@
 import numpy as np
+from qiskit import QuantumCircuit
 from qiskit.circuit.library import *
+
 
 # Initialization of Circuits to characterise
 class CircuitLibraryCircuits():
@@ -16,16 +18,17 @@ class CircuitLibraryCircuits():
             raise ValueError('qubit is too small: {0}'.format(qubit))
         half = int(qubit / 2)
         return self._repeat(IntegerComparator(num_state_qubits=half, value=1), repeats)
-    
+
     def weighted_adder(self, qubit, repeats):
         if qubit > 20:
             raise ValueError('qubit is too big: {0}'.format(qubit))
         return self._repeat(WeightedAdder(num_state_qubits=qubit).decompose(), repeats)
-    
+
     def quadratic_form(self, qubit, repeats):
         if qubit < 4:
             raise ValueError('qubit is too small: {0}'.format(qubit))
-        return self._repeat(QuadraticForm(num_result_qubits=(qubit - 3), linear=[1, 1, 1], little_endian=True).decompose(), repeats)
+        return self._repeat(
+            QuadraticForm(num_result_qubits=(qubit - 3), linear=[1, 1, 1], little_endian=True).decompose(), repeats)
 
     # Basic Circuits
     def qft(self, qubit, repeats):
@@ -37,13 +40,13 @@ class CircuitLibraryCircuits():
 
     def real_amplitudes_linear(self, qubit, repeats):
         return self.transpile(RealAmplitudes(qubit, reps=repeats, entanglement='linear'))
-    
+
     def efficient_su2(self, qubit, repeats):
         return self.transpile(EfficientSU2(qubit).decompose())
 
     def efficient_su2_linear(self, qubit, repeats):
         return self.transpile(EfficientSU2(qubit, reps=repeats, entanglement='linear'))
-    
+
     def excitation_preserving(self, qubit, repeats):
         return self.transpile(ExcitationPreserving(qubit, reps=repeats).decompose())
 
@@ -57,7 +60,7 @@ class CircuitLibraryCircuits():
         f = [-1, 1] * (2 ** (qubit - 1))
         g = [1, -1] * (2 ** (qubit - 1))
         return self._repeat(FourierChecking(f, g), repeats)
-    
+
     def graph_state(self, qubit, repeats):
         a = np.reshape([0] * (qubit ** 2), [qubit] * 2)
         for _ in range(qubit):
@@ -69,7 +72,7 @@ class CircuitLibraryCircuits():
                     a[j][i] = 1
                     break
         return self._repeat(GraphState(a), repeats)
-    
+
     def hidden_linear_function(self, qubit, repeats):
         a = np.reshape([0] * (qubit ** 2), [qubit] * 2)
         for _ in range(qubit):
@@ -149,3 +152,36 @@ class CircuitLibraryCircuits():
     def piecewise_poly_pauli_rotations(self, qubits, repeats):
         return self._repeat(PiecewisePolynomialPauliRotations(num_state_qubits=qubits), repeats)
 
+    # Generalized Gates
+    def mcmt(self, qubits, repeats):
+        return self._repeat(MCMT(HGate(), qubits, qubits).decompose(), repeats)
+
+    def mcmtv_chain(self, qubits, repeats):
+        return self._repeat(MCMTVChain(HGate(), qubits, qubits).decompose(), repeats)
+
+    def permutation(self, qubits, repeats):
+        simple_seed = 123
+        return self._repeat(Permutation(qubits, seed=simple_seed).decompose(), repeats)
+
+    def gms(self, qubits, repeats):
+        # Global Mølmer–Sørensen gate
+        if qubits > 2:
+            return self._repeat(MCMTVChain(HGate(), qubits, qubits).decompose(), repeats)
+        gms = QuantumCircuit(qubits, name="gms")
+        theta = [qubits] * int((qubits ** 2 - 1) / 2)
+        for i in range(qubits):
+            for j in range(i + 1, qubits):
+                gms.append(RXXGate(theta[i][j]), [i, j])
+        return self._repeat(gms.decompose(), repeats)
+
+    def gr(self, qubits, repeats):
+        return self._repeat(GR(qubits, 45.0, 67.0), repeats)
+
+    def grx(self, qubits, repeats):
+        return self._repeat(GRX(qubits, 45.0), repeats)
+
+    def gry(self, qubits, repeats):
+        return self._repeat(GRY(qubits, 45.0), repeats)
+
+    def grz(self, qubits, repeats):
+        return self._repeat(GRZ(qubits, 67.0), repeats)

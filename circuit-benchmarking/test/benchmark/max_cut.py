@@ -1,5 +1,4 @@
-
-from itertools import product
+'''from itertools import product
 from timeit import timeit
 
 import networkx as nx
@@ -12,6 +11,7 @@ from qiskit.utils import algorithm_globals, QuantumInstance
 from qiskit_optimization.algorithms import MinimumEigenOptimizer, GroverOptimizer
 from qiskit_optimization.applications import Maxcut
 from qiskit_optimization.converters import QuadraticProgramToQubo
+
 
 class MaxcutBenchmarks:
 
@@ -69,18 +69,4 @@ class MaxcutBenchmarks:
             quantum_instance=self._qins,
         )
         meo.solve(self._qp)
-
-
-if __name__ == "__main__":
-    for n, d in product(*MaxcutBenchmarks.params):
-        if n < d:
-            continue
-        bench = MaxcutBenchmarks()
-        try:
-            bench.setup(n=n, d=d)
-        except NotImplementedError:
-            continue
-        for method in set(dir(MaxcutBenchmarks)):
-            if method.startswith("time_"):
-                elapsed = timeit(f"bench.{method}(None, None)", number=10, globals=globals())
-                print(f"n={n}, d={d}, {method}:\t{elapsed}")
+'''

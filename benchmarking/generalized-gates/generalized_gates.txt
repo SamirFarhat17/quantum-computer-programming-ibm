@@ -1,0 +1,89 @@
+· Creating environments
+· Discovering benchmarks
+· Running 6 total benchmarks (1 commits * 1 environments * 6 benchmarks)
+[  0.00%] · For qiskit-aer commit 8ac51d88 <main>:
+[  0.00%] ·· Benchmarking conda-py3.9
+[ 16.67%] ··· ....GeneralizedGates.track_matrix_product_state                 ok
+[ 16.67%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   mcmt         sampling           1000        ideal     5      0.09045076370239258  
+               mcmtv_chain      sampling           1000        ideal     5     0.0047647953033447266 
+               permutation      sampling           1000        ideal     5     0.0010805130004882812 
+                   gms          sampling           1000        ideal     5      0.004725933074951172 
+                    gr          sampling           1000        ideal     5     0.0010716915130615234 
+                   grx          sampling           1000        ideal     5     0.0010097026824951172 
+                   gry          sampling           1000        ideal     5     0.0010380744934082031 
+                   grz          sampling           1000        ideal     5     0.0010266304016113281 
+              ============= ================ ================ ======= ======= =======================
+
+[ 33.33%] ··· basic_05q.GeneralizedGates.track_statevector                    ok
+[ 33.33%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   mcmt         sampling           1000        ideal     5      0.12572574615478516  
+               mcmtv_chain      sampling           1000        ideal     5      0.006337165832519531 
+               permutation      sampling           1000        ideal     5     0.0020928382873535156 
+                   gms          sampling           1000        ideal     5      0.006465911865234375 
+                    gr          sampling           1000        ideal     5      0.001691579818725586 
+                   grx          sampling           1000        ideal     5     0.0017206668853759766 
+                   gry          sampling           1000        ideal     5     0.0017211437225341797 
+                   grz          sampling           1000        ideal     5     0.0026886463165283203 
+              ============= ================ ================ ======= ======= =======================
+
+[ 50.00%] ··· ....GeneralizedGates.track_matrix_product_state         1/8 failed
+[ 50.00%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   mcmt         sampling           1000        ideal     15            failed        
+               mcmtv_chain      sampling           1000        ideal     15      0.0412907600402832  
+               permutation      sampling           1000        ideal     15    0.0014843940734863281 
+                   gms          sampling           1000        ideal     15     0.014070272445678711 
+                    gr          sampling           1000        ideal     15    0.0010530948638916016 
+                   grx          sampling           1000        ideal     15    0.0009984970092773438 
+                   gry          sampling           1000        ideal     15    0.0010228157043457031 
+                   grz          sampling           1000        ideal     15    0.0010437965393066406 
+              ============= ================ ================ ======= ======= =======================
+
+[ 66.67%] ··· basic_15q.GeneralizedGates.track_statevector            1/8 failed
+[ 66.67%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   mcmt         sampling           1000        ideal     15            failed        
+               mcmtv_chain      sampling           1000        ideal     15     0.05038142204284668  
+               permutation      sampling           1000        ideal     15    0.0020303726196289062 
+                   gms          sampling           1000        ideal     15     0.018717050552368164 
+                    gr          sampling           1000        ideal     15    0.0014040470123291016 
+                   grx          sampling           1000        ideal     15     0.001476287841796875 
+                   gry          sampling           1000        ideal     15    0.0014541149139404297 
+                   grz          sampling           1000        ideal     15    0.0023097991943359375 
+              ============= ================ ================ ======= ======= =======================
+
+[ 83.33%] ··· ....GeneralizedGates.track_matrix_product_state             failed
+[ 83.33%] ··· ============= ================ ================ ======= ======= ========
+               application   measure_method   measure_counts   noise   qubit          
+              ------------- ---------------- ---------------- ------- ------- --------
+                   mcmt         sampling           1000        ideal     25    failed 
+               mcmtv_chain      sampling           1000        ideal     25    failed 
+               permutation      sampling           1000        ideal     25    failed 
+                   gms          sampling           1000        ideal     25    failed 
+                    gr          sampling           1000        ideal     25    failed 
+                   grx          sampling           1000        ideal     25    failed 
+                   gry          sampling           1000        ideal     25    failed 
+                   grz          sampling           1000        ideal     25    failed 
+              ============= ================ ================ ======= ======= ========
+
+[100.00%] ··· basic_25q.GeneralizedGates.track_statevector            1/8 failed
+[100.00%] ··· ============= ================ ================ ======= ======= =======================
+               application   measure_method   measure_counts   noise   qubit                         
+              ------------- ---------------- ---------------- ------- ------- -----------------------
+                   mcmt         sampling           1000        ideal     25            failed        
+               mcmtv_chain      sampling           1000        ideal     25     0.06701445579528809  
+               permutation      sampling           1000        ideal     25    0.0020356178283691406 
+                   gms          sampling           1000        ideal     25     0.03470110893249512  
+                    gr          sampling           1000        ideal     25    0.0014197826385498047 
+                   grx          sampling           1000        ideal     25     0.00144195556640625  
+                   gry          sampling           1000        ideal     25     0.001438140869140625 
+                   grz          sampling           1000        ideal     25     0.008872509002685547 
+              ============= ================ ================ ======= ======= =======================
+
