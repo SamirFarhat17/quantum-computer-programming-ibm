@@ -8,7 +8,8 @@ def plot_circuit_series(filename, qubits, circuit_names, circuit_values):
 
     for i in range(0, len(circuit_names)):
         plt.plot(qubits, circuit_values[i], label=circuit_names[i])
-    plt.legend()
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+          fancybox=True, shadow=True, ncol=5)
     plt.xlabel(x)
     plt.ylabel(y)
     plt.savefig(filename)
@@ -172,4 +173,14 @@ literal_generalized_gates = [mcmt,
                              gry,
                              grz]
 
-plot_circuit_series("circuits/generalized_gates.png", qubit_count, generalized_gates, literal_generalized_gates)
+#plot_circuit_series("circuits/generalized_gates.png", qubit_count, generalized_gates, literal_generalized_gates)
+
+final_list = literal_n_local_circuits + literal_prob_distro_circuits + literal_particular_circuits\
+                   + literal_arithmetic_circuits + literal_pauli_rotations + literal_generalized_gates\
+                   + literal_standard_gates
+
+final_list_names = n_local_circuits + prob_distro_circuits + particular_circuits\
+                   + arithmetic_circuits + pauli_rotational_gates + generalized_gates \
+                   + standard_gates
+
+plot_circuit_series("circuits/all_circuits.png", qubit_count, final_list_names, final_list)
