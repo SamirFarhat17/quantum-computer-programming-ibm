@@ -1,0 +1,13 @@
+Just some notes on what the benchmarks are representing as it might not be obvious from the name
+----------------------------------------------------------------------------------
+Circuits, Converters and Solvers:
+
+
+----------------------------------------------------------------------------------
+Algos:
+Clique -
+Clique Populate -
+Docplex - 
+Knapsack - 
+Max cut - 
+Vertex cover - 

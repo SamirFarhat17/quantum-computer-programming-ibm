@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 # Plotting function
 def plot_circuit_series(filename, qubits, circuit_names, circuit_values):
     x = "qubits"
-    y = "times"
+    y = "time(ms)"
 
     for i in range(0, len(circuit_names)):
         plt.plot(qubits, circuit_values[i], label=circuit_names[i])
-    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.legend()
     plt.xlabel(x)
     plt.ylabel(y)
     plt.savefig(filename)
@@ -45,7 +45,7 @@ literal_arithmetic_circuits = [integer_comparator,
                                 hrs_cum_mult,
                                 rgqft_mult]
 
-plot_circuit_series("arithmetic_circuits.png", qubit_count, arithmetic_circuits, literal_arithmetic_circuits)
+#plot_circuit_series("arithmetic_circuits.png", qubit_count, arithmetic_circuits, literal_arithmetic_circuits)
 
 # N-Local Circuits
 n_local_circuits = ['qft',
@@ -72,7 +72,7 @@ literal_n_local_circuits = [qft,
                             excitation_preserving,
                             excitation_preserving_linear]
 
-plot_circuit_series("n_local_circuits.png", qubit_count, n_local_circuits, literal_n_local_circuits)
+#plot_circuit_series("n_local_circuits.png", qubit_count, n_local_circuits, literal_n_local_circuits)
 
 # Particular Quantum Circuits
 particular_circuits = ['fourier_checking',
@@ -96,7 +96,7 @@ literal_particular_circuits = [fourier_checking,
                                quantum_volume,
                                phase_estimation]
 
-plot_circuit_series("particular_circuits.png", qubit_count, particular_circuits, literal_particular_circuits)
+#plot_circuit_series("particular_circuits.png", qubit_count, particular_circuits, literal_particular_circuits)
 
 # Probability Distribution Circuits
 prob_distro_circuits = ['uniform_distribution',
@@ -111,7 +111,7 @@ literal_prob_distro_circuits = [uniform_distribution,
                                 normal_distribution,
                                 log_normal_distribution]
 
-plot_circuit_series("prob_distro_circuits.png", qubit_count, prob_distro_circuits, literal_prob_distro_circuits)
+#plot_circuit_series("prob_distro_circuits.png", qubit_count, prob_distro_circuits, literal_prob_distro_circuits)
 
 # Standard Gates
 standard_gates = ['barrier',
@@ -123,7 +123,7 @@ mc_phase = [0.004196882247924805, 0.005513191223144531, 0.007679939270019531]
 literal_standard_gates = [barrier,
                           mc_phase]
 
-plot_circuit_series("standard_circuits.png", qubit_count, standard_gates, literal_standard_gates)
+#plot_circuit_series("standard_circuits.png", qubit_count, standard_gates, literal_standard_gates)
 
 # Pauli-Rotational Circuits
 pauli_rotational_gates = ['linear_pauli_rotations',
@@ -141,7 +141,7 @@ literal_pauli_rotations = [linear_pauli_rotations,
                            piecewise_lin_pauli_rotations,
                            piecewise_poly_pauli_rotations]
 
-plot_circuit_series("pauli_rotational_circuits.png", qubit_count, pauli_rotational_gates, literal_pauli_rotations)
+#plot_circuit_series("pauli_rotational_circuits.png", qubit_count, pauli_rotational_gates, literal_pauli_rotations)
 
 # Generalized Gates
 generalized_gates = ['mcmt',
@@ -172,7 +172,7 @@ literal_generalized_gates = [mcmt,
                              gry,
                              grz]
 
-plot_circuit_series("circuits/generalized_gates.png", qubit_count, generalized_gates, literal_generalized_gates)
+#plot_circuit_series("circuits/generalized_gates.png", qubit_count, generalized_gates, literal_generalized_gates)
 
 final_list = literal_n_local_circuits + literal_prob_distro_circuits + literal_particular_circuits\
                    + literal_arithmetic_circuits + literal_pauli_rotations + literal_generalized_gates\
@@ -182,4 +182,4 @@ final_list_names = n_local_circuits + prob_distro_circuits + particular_circuits
                    + arithmetic_circuits + pauli_rotational_gates + generalized_gates \
                    + standard_gates
 
-plot_circuit_series("circuits/all_circuits.png", qubit_count, final_list_names, final_list)
+#plot_circuit_series("circuits/all_circuits.png", qubit_count, final_list_names, final_list)

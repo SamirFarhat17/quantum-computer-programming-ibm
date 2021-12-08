@@ -5,11 +5,11 @@ from plot_hardware import qubit_count
 # Plotting Method
 def plot_circuit_series(filename, measurements, qubits, circuit_values):
     x = "measurement_frequency"
-    y = "times"
+    y = "time(ms)"
 
     for i in range(0, len(qubits)):
         plt.plot(measurements, circuit_values[i], label="qubit num. "+str(qubits[i]))
-    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.legend()
     plt.xlabel(x)
     plt.ylabel(y)
     plt.xscale('log')

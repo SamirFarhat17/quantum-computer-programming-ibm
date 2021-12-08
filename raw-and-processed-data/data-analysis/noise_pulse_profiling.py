@@ -25,7 +25,7 @@ literal_damping_noise = [fourier_checking,
                          quantum_volume,
                          phase_estimation]
 
-plot_circuit_series("damping_noise_profiles.png", qubit, damping_noise, literal_damping_noise)
+plot_circuit_series("noise/damping_noise_profiles.png", qubit, damping_noise, literal_damping_noise)
 
 depolarising_noise = ['fourier_checking',
                   'graph_state',
