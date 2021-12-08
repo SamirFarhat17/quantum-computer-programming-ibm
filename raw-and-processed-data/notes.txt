@@ -2,6 +2,31 @@ Just some notes on what the benchmarks are representing as it might not be obvio
 ----------------------------------------------------------------------------------
 Circuits, Converters and Solvers:
 
+real amplitudes - The RealAmplitudes circuit is a heuristic trial wave function used as Ansatz in chemistry applications or classification circuits in machine learning
+
+efficient su2 - circuit consists of layers of single qubit operations spanned by SU(2) and CX entanglements. This is a heuristic pattern that can be used to prepare trial wave functions for variational quantum algorithms or classification circuit for machine learning
+
+excitation preserving - his trial wave function consists of layers of Z rotations with 2-qubit entanglements. The entangling is creating using XX+YY rotations and optionally a controlled-phase gate for the mode 'fsim'
+
+graph state - prepare a graph state
+
+hidden linear function - The 2D Hidden Linear Function problem is determined by a 2D adjacency matrix A, where only elements that are nearest-neighbor on a grid have non-zero entries. shown that the present circuit solves this problem on a quantum computer in constant depth
+
+quantum volume - Quantum Volume (QV) is a single-number metric that can be measured using a concrete protocol on near-term quantum computers of modest size. The QV method quantifies the largest random circuit of equal width and depth that the computer successfully implements
+
+phase estimation - Quantum phase estimation is one of the most important subroutines in quantum computation. It serves as a central building block for many quantum algorithms. The objective of the algorithm is the following:
+
+distributions - 
+
+mcmt - 
+
+permutation - 
+
+gms - 
+
+gr_ - 
+
+pauli rotations - 
 
 ----------------------------------------------------------------------------------
 Algos:
