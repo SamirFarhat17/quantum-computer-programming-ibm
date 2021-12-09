@@ -1,5 +1,3 @@
-// To use this configuration for benchmarks, we have to run asv as follows...
-// $ asv --connfig asv.linux.conf.json
 {
     "version": 1,
     "project": "qiskit-aer",
