@@ -1,6 +1,6 @@
 ```bash
 pip install qiskit
 pip install asv
-cd config-benchmark
-
+cd configs-benchmarks
+asv run --config asv.linux.conf.json
 ```
