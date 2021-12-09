@@ -33,10 +33,9 @@ class NoiseSimulatorBenchmarkSuite(SimulatorBenchmarkSuite):
                          measures=measures,
                          measure_counts=measure_counts,
                          noise_model_names=noise_model_names)
-'''
+
     def track_statevector(self, app, measure, measure_count, noise_name, qubit):
         return self._run(self.RUNTIME_STATEVECTOR_CPU, app, measure, measure_count, noise_name, qubit)
 
     def track_density_matrix(self, app, measure, measure_count, noise_name, qubit):
         return self._run(self.RUNTIME_DENSITY_MATRIX_CPU, app, measure, measure_count, noise_name, qubit)
-'''

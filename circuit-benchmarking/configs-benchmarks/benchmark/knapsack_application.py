@@ -1,4 +1,3 @@
-'''
 import random
 from qiskit import Aer
 from qiskit.algorithms import QAOA, VQE
@@ -60,4 +59,3 @@ class KnapsackBenchmarks:
             quantum_instance=self._qins,
         )
         meo.solve(self._qp)
-'''

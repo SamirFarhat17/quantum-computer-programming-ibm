@@ -1,4 +1,4 @@
-'''from qiskit_optimization.algorithms import MinimumEigenOptimizer
+from qiskit_optimization.algorithms import MinimumEigenOptimizer
 from qiskit import Aer
 from qiskit.utils import algorithm_globals, QuantumInstance
 from qiskit.algorithms import QAOA, NumPyMinimumEigensolver
@@ -42,4 +42,3 @@ class VertexCoverBenchmarks:
             min_eigen_solver=QAOA(reps=1, quantum_instance=self._qins)
         )
         meo.solve(self._qp)
-'''

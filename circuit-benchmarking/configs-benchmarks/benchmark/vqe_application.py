@@ -10,7 +10,7 @@ from qiskit.chemistry.applications import MolecularGroundStateEnergy
 from qiskit.chemistry.components.initial_states import HartreeFock
 from qiskit.chemistry.components.variational_forms import UCCSD
 from qiskit.chemistry.drivers import PySCFDriver, UnitsType
-'''
+
 class UCCSDBenchmarkSuite:
 
     def __init__(self,
@@ -52,4 +52,3 @@ class UCCSDBenchmarkSuite:
         mol_string = self.mol_strings[mol_name][0]
         qubit = self.mol_strings[mol_name][1]
         self._run_uccsd_vqe(mol_string, 'statevector', threads)
-'''

@@ -1,4 +1,4 @@
-'''from itertools import product
+from itertools import product
 from timeit import timeit
 
 import networkx as nx
@@ -69,4 +69,3 @@ class MaxcutBenchmarks:
             quantum_instance=self._qins,
         )
         meo.solve(self._qp)
-'''

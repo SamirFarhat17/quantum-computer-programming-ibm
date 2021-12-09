@@ -225,29 +225,3 @@ class SimulatorBenchmarkSuite(CircuitLibraryCircuits):
                 reason = 'unknown'
             raise ValueError('simulation error ({0})'.format(reason))
         return time() - start
-    
-    def run_manual(self):
-        import timeout_decorator
-        @timeout_decorator.timeout(self.timeout)
-        def run_with_timeout (suite, runtime, app, measure, measure_count, noise_name, qubit):
-            start = time()
-            return eval('suite.track_{0}'.format(runtime))(app, measure, measure_count, noise_name, qubit)
-
-        for noise_name in self.noise_model_names:
-            for runtime in self.runtime_names:
-                for app in self.apps:
-                    repeats = None if app not in self.app2rep else self.app2rep[app]
-                    app_name = app if repeats is None else '{0}:{1}'.format(app, repeats)
-                    for qubit in self.qubits:
-                        for measure in self.measures:
-                            for measure_count in self.measure_counts:
-                                print ('{0},{1},{2},{3},{4},{5},{6},'.format(self.__name__, app_name, runtime, measure, measure_count, noise_name, qubit), end="")
-                                try:
-                                    elapsed = run_with_timeout(self, runtime, app, measure, measure_count, noise_name, qubit)
-                                    print ('{0}'.format(elapsed))
-                                except ValueError as e:
-                                    print ('{0}'.format(e))
-                                except:
-                                    import traceback
-                                    traceback.print_exc(file=sys.stderr)
-                                    print ('unknown error')

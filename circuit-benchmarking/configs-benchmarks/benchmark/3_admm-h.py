@@ -57,7 +57,7 @@ class Admm3Benchmarks:
         self._admm_q = ADMMOptimizer(params=admm_params,
                                      qubo_optimizer=qubo_optimizer,
                                      continuous_optimizer=convex_optimizer)
-'''
+
     def time_admm(self, _, __):
         # construct model using docplex
         mdl = Model('ex6')
@@ -106,4 +106,3 @@ class Admm3Benchmarks:
                                continuous_optimizer=convex_optimizer)
         # run ADMM to solve problem
         result_q = admm_q.solve(qp)
-'''
